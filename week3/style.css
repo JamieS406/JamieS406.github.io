@@ -1,0 +1,81 @@
+/*=======================
+Rationale:
+1. Typography
+It is good practice to have 2 fonts, a title and body font.
+Aleo is a clear and bold title that helps to define titles in an instantly readable manner.
+Montserrat pairs well with Aleo, being legible and neutral while not overpowering the title font.
+
+2. Colours
+I wanted to maintain similar colour schema across the body text sections, for greater legibility, 
+and not over-saturate the texts with excessive contrast. Title fonts are in a blue font, while body text is generally in green hues.
+==============*/
+
+* {
+  color: blueviolet;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body {
+  background-color: aliceblue;
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
+.green-color {
+  color: forestgreen;
+}
+h1 {
+  color: rgba(40, 103, 220, 0.941);
+  font-weight: bold;
+  font-family: "Aleo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 0.9rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+h2,
+h3 {
+  color: navy;
+  line-height: 1.7;
+  padding: 0.5rem;
+}
+li {
+  color: rgb(167, 144, 16);
+}
+
+section {
+  text-align: center;
+  border: 1px solid cornflowerblue;
+  padding: 2rem;
+}
+
+#second-para {
+  color: cadetblue;
+  padding: 1rem;
+}
+
+/* Style attribute = 1000
+ID = 100
+Class = 10
+Element = 1 */
+/* body {} trumps everything? */
+/*id trumps class*/
+/* class trumps "element 1, element 2{}" or *{} instances  */
+/* class vs id: class is for multiple instances, id is for specific use */
+/* shortcut for COMMENT = CMD + / */
+/* curly braces{} */
+/* square brackets */
+/* parentheses <> */
+/* round brackets ()*/
