@@ -18,8 +18,18 @@ p {
   font-style: normal;
   font-size: 1rem;
   text-align: center;
+  text-wrap: square;
   padding: 0.5rem;
+  padding-bottom: 2rem;
 }
+
+.box {
+  border: 0.1rem solid #f6a94b;
+  border-radius: 0.5rem;
+  padding: 4rem;
+  word-wrap: break-word;
+}
+
 li {
   color: rgba(128, 142, 21, 0.941);
   font-family: "Arvo", sans-serif;
@@ -28,7 +38,6 @@ li {
   font-style: normal;
   font-size: 1rem;
   text-align: left;
-  text-wrap-style: auto;
   padding: 0.5rem;
   padding-bottom: 1.5rem;
 }
@@ -58,6 +67,7 @@ h2 {
 
 #para-2 {
   text-align: left;
+  padding-bottom: 2rem;
 }
 
 h3 {
