@@ -1,7 +1,7 @@
 /*=======================
 Rationale:
 1. Typography
-It is good practice to have 2 fonts, a title and body font.
+I believe it is good practice to have 2 fonts, a title and body font.
 Aleo is a clear and bold title that helps to define titles in an instantly readable manner.
 Montserrat pairs well with Aleo, being legible and neutral while not overpowering the title font.
 
@@ -16,8 +16,12 @@ and not over-saturate the texts with excessive contrast. Title fonts are in a bl
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  padding: 0.1rem;
 }
 
+p {
+  padding: 1rem;
+}
 body {
   background-color: aliceblue;
   font-size: 0.9rem;
@@ -45,11 +49,13 @@ h2 {
 h3 {
   font-size: 1rem;
 }
+
 h2,
 h3 {
   color: navy;
   line-height: 1.7;
   padding: 0.5rem;
+  text-align: left;
 }
 li {
   color: rgb(167, 144, 16);
@@ -66,10 +72,13 @@ section {
   padding: 1rem;
 }
 
-/* Style attribute = 1000
+/* 
+Heirachy of Importance:
+Style attribute = 1000
 ID = 100
 Class = 10
 Element = 1 */
+
 /* body {} trumps everything? */
 /*id trumps class*/
 /* class trumps "element 1, element 2{}" or *{} instances  */
