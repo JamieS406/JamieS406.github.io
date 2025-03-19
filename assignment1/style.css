@@ -28,6 +28,7 @@ li {
   font-style: normal;
   font-size: 1rem;
   text-align: left;
+  text-wrap-style: auto;
   padding: 0.5rem;
   padding-bottom: 1.5rem;
 }
@@ -60,7 +61,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(167, 210, 239);
+  color: rgb(112, 167, 203);
   font-weight: bold;
   font-size: 5rem;
   text-transform: uppercase;
