@@ -9,6 +9,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+p {
+  color: rgba(128, 142, 21, 0.941);
+  font-family: "Arvo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
 h1 {
   color: rgba(66, 119, 216, 0.941);
   font-weight: bold;
@@ -39,4 +51,18 @@ h3 {
   text-transform: uppercase;
   text-align: center;
   line-height: 4rem;
+}
+
+h4 {
+  color: rgba(24, 58, 123, 0.941);
+  font-weight: bold;
+  font-family: "Arvo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 560;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6rem;
+  padding: 0.1rem;
+  padding-block-start: 4rem;
 }
