@@ -1,0 +1,19 @@
+body {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+p {
+  border: 1px solid brown;
+  min-width: 400px;
+  min-height: 100px;
+  margin: 0 auto; /* 0 auto on margin makes horizontal centering*/
+}
+/* GOOD FOR FONTS= rem. rem units takes reference from the default settings of font from the user. Adaptable for diff needs of users.*/
+/* Other things can use Pixels (px) Don't use rem for anything else*/
+/*padding goes top right bottom left, so padding can be "padding: 1rem 2 rem 10px 20px (top right bottom left, in order)*/

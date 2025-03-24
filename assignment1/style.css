@@ -1,3 +1,7 @@
+/*change all non-text elements to px please
+- All padding
+- All line-height*/
+
 body {
   background-color: aliceblue;
   font-size: 0.9rem;
@@ -17,8 +21,9 @@ p {
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
-  text-align: centre;
+  text-align: center;
   text-wrap: square;
+  margin: 0 auto;
   padding: 0.5rem;
   padding-bottom: 2rem;
 }
@@ -68,10 +73,12 @@ h4 {
   font-weight: 560;
   font-style: normal;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
   line-height: 1.6rem;
   padding: 0.3rem;
   padding-block-start: 4rem;
+  max-width: 75ch;
+  margin: 0 auto;
 }
 
 .column {
