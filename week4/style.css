@@ -1,19 +1,44 @@
 body {
   font-size: 1.2rem;
   text-align: center;
+  padding: 30px;
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
+  margin: 20px;
+  margin-top: 40px;
 }
 
 p {
   border: 1px solid brown;
+  border-bottom: 3px dashed green;
+  background-color: rgb(239, 243, 255);
   min-width: 400px;
-  min-height: 100px;
+  min-height: 300px;
+  margin-left: 30px;
   margin: 0 auto; /* 0 auto on margin makes horizontal centering*/
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.vcenter {
+  line-height: 260px;
+  /*height is 300 padding is 20, ie. 300-20-20=260*/
+}
+
+span {
+  color: blueviolet;
+  /*display:block; */
 }
 /* GOOD FOR FONTS= rem. rem units takes reference from the default settings of font from the user. Adaptable for diff needs of users.*/
 /* Other things can use Pixels (px) Don't use rem for anything else*/
-/*padding goes top right bottom left, so padding can be "padding: 1rem 2 rem 10px 20px (top right bottom left, in order)*/
+
+/*padding goes Top Right Bottom Left, 
+so padding can be "padding: 1rem 2 rem 10px 20px 
+(T R B L, in order)*/
+/*margin=for outside content 口
+padding=for inside content 回 */
+
+/* good practice: start the planning by choosing the font first, then formatting around it */
