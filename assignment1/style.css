@@ -19,10 +19,10 @@ as a nod to its design and also give cohesion to the overall aesthetic.*/
 Accent colour of orange, but used sparingly, for interest.
 This colour scheme echoes the colours used in the website. */
 p {
-  color: rgba(128, 142, 21, 0.941);
+  color: rgba(109, 121, 11, 0.941);
   font-family: "Arvo", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 100;
   font-style: normal;
   font-size: 1.3rem;
   text-align: left;
@@ -38,9 +38,9 @@ h1 {
   font-weight: bold;
   font-family: "Arvo", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 550;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: center;
   padding: 20px;
 }
@@ -84,6 +84,23 @@ h4 {
   padding-block-start: 60px;
   max-width: 40ch;
   margin: 0 auto;
+}
+
+h5 {
+  font-weight: 550;
+  font-family: "Arvo", sans-serif;
+  padding: 10px;
+  font-size: 6rem;
+  text-align: right;
+  color: rgba(24, 58, 123, 0.941);
+}
+
+.whiteout {
+  color: aliceblue;
+}
+
+.lopacwhite {
+  color: rgba(240, 248, 255, 0.582);
 }
 
 /*column & row section was a different method for creating sections I tried out.*/
@@ -130,13 +147,6 @@ for signposting, and allowed me to use the flex function in code!*/
 
 /* why can't i align the flexbox to the center?*/
 
-.num {
-  padding: 10px;
-  font-size: 6rem;
-  text-align: right;
-  color: rgba(24, 58, 123, 0.941);
-}
-
 .qntitle {
   padding: 10px;
   text-align: left;
@@ -178,7 +188,7 @@ for signposting, and allowed me to use the flex function in code!*/
 }
 
 #q6_container {
-  min-width: 700px;
+  max-width: 700px;
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -191,7 +201,7 @@ for signposting, and allowed me to use the flex function in code!*/
 }
 
 #q7_container {
-  min-width: 800px;
+  max-width: 700px;
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -204,13 +214,13 @@ for signposting, and allowed me to use the flex function in code!*/
 }
 
 #grid-container1 {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(11, 37, 86, 0.941);
   border: 2px solid rgba(204, 226, 236, 0.941);
   border-radius: 5px;
   min-height: 100px;
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 1fr 1fr 1fr;
 }
 /* first row fraction 0.2 to accomodate img under title section */
@@ -232,6 +242,7 @@ for signposting, and allowed me to use the flex function in code!*/
   gap: 10px;
   padding: 10px;
   padding-left: 40px;
+  padding-bottom: 100px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -242,6 +253,7 @@ for signposting, and allowed me to use the flex function in code!*/
   color: white;
   display: flex;
   padding: 10px;
+  padding-left: 40px;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -263,6 +275,7 @@ for signposting, and allowed me to use the flex function in code!*/
   display: flex;
   gap: 10px;
   padding-left: 30px;
+  padding-bottom: 100px;
   justify-content: flex-end;
   align-items: flex-start;
 }
