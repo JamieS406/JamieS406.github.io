@@ -28,7 +28,7 @@ p {
   text-align: left;
   text-wrap: square;
   margin: 0 auto;
-  max-width: 50ch;
+  max-width: 60ch;
   padding: 10px;
   padding-bottom: 50px;
 }
@@ -86,34 +86,126 @@ h4 {
   margin: 0 auto;
 }
 
+/*column & row section was a different method for creating sections I tried out.*/
+.column {
+  float: inline-start;
+  width: 33.3%;
+  padding: 2px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+li {
+  color: rgba(128, 142, 21, 0.941);
+  font-family: "Arvo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0.5rem;
+  padding-bottom: 1.5rem;
+  max-width: 60ch;
+}
+
 /* having the numbers and text formatted this way felt better
 for signposting, and allowed me to use the flex function in code!*/
-.box_qn1 {
+.box_qn {
   width: 1200px;
   min-height: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   padding-left: 300px;
   padding-block-start: 60px;
 }
 
-.o1 {
+/* why can't i align the flexbox to the center?*/
+
+.num {
   padding: 10px;
   font-size: 6rem;
   text-align: right;
   color: rgba(24, 58, 123, 0.941);
 }
 
-.qn1 {
+.qntitle {
   padding: 10px;
   text-align: left;
 }
 
-#grid-container {
+.sectionseg {
+  max-width: 1400px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: first baseline;
+}
+
+#q4_container {
+  min-width: 700px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.1fr 1fr;
+}
+
+#q4_para {
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+#q5_container {
+  min-width: 500px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.1fr 1fr;
+}
+
+#q5_para {
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+#q6_container {
+  min-width: 700px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.1fr 1fr;
+}
+
+#q6_para {
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+#q7_container {
+  min-width: 800px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 0.1fr 1fr;
+}
+
+#q7_para {
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+#grid-container1 {
   background-color: rgb(255, 255, 255);
-  border: 2px solid rgba(128, 142, 21, 0.941);
+  border: 2px solid rgba(204, 226, 236, 0.941);
   border-radius: 5px;
   min-height: 100px;
   padding: 20px;
@@ -132,6 +224,7 @@ for signposting, and allowed me to use the flex function in code!*/
   align-items: center;
 }
 
+/*to fix centring problem*/
 #box2 {
   grid-column: 4/6;
   grid-row: 2;
@@ -140,7 +233,7 @@ for signposting, and allowed me to use the flex function in code!*/
   padding: 10px;
   padding-left: 40px;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #box3 {
@@ -192,34 +285,4 @@ for signposting, and allowed me to use the flex function in code!*/
   padding: 30px;
   justify-content: flex-end;
   align-items: space-evenly;
-}
-
-/*column & row section was a different method for creating sections I tried out.*/
-
-.column {
-  float: inline-start;
-  width: 33.3%;
-  padding: 2px;
-  padding-top: 30px;
-  padding-bottom: 100px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-li {
-  color: rgba(128, 142, 21, 0.941);
-  font-family: "Arvo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.3rem;
-  text-align: left;
-  padding: 0.5rem;
-  padding-bottom: 1.5rem;
-  max-width: 60ch;
 }
