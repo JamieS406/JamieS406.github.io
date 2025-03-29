@@ -5,15 +5,19 @@
 body {
   background-color: aliceblue;
   font-size: 1.3rem;
-  padding: 20px;
+  padding: 10px;
 }
 
+/* I intentionally tried to make the fonts similar to the website,
+as a nod to its design and also give cohesion to the overall aesthetic.*/
 .boldonse-regular {
   font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-
+/*main colour palette: Shades of Navy and a sage green. 
+Accent colour of orange, but used sparingly, for interest.
+This colour scheme echoes the colours used in the website. */
 p {
   color: rgba(128, 142, 21, 0.941);
   font-family: "Arvo", sans-serif;
@@ -21,15 +25,16 @@ p {
   font-weight: 500;
   font-style: normal;
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   text-wrap: square;
   margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 30px;
+  max-width: 50ch;
+  padding: 10px;
+  padding-bottom: 50px;
 }
 
 h1 {
-  color: rgba(66, 119, 216, 0.941);
+  color: rgba(49, 93, 175, 0.941);
   font-weight: bold;
   font-family: "Arvo", sans-serif;
   font-optical-sizing: auto;
@@ -37,7 +42,7 @@ h1 {
   font-style: normal;
   font-size: 1.5rem;
   text-align: center;
-  padding: 2.8rem;
+  padding: 20px;
 }
 h2 {
   color: rgba(24, 58, 123, 0.941);
@@ -48,6 +53,7 @@ h2 {
   font-size: 6rem;
   text-transform: uppercase;
   text-align: center;
+  padding: 20px;
   line-height: 4.5rem;
 }
 
@@ -71,18 +77,43 @@ h4 {
   font-optical-sizing: auto;
   font-weight: 560;
   font-style: normal;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   text-align: center;
-  line-height: 1.6rem;
+  line-height: 2rem;
   padding: 10px;
   padding-block-start: 60px;
-  max-width: 75ch;
+  max-width: 40ch;
   margin: 0 auto;
+}
+
+/* having the numbers and text formatted this way felt better
+for signposting, and allowed me to use the flex function in code!*/
+.box_qn1 {
+  width: 1200px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 300px;
+  padding-block-start: 60px;
+}
+
+.o1 {
+  padding: 10px;
+  font-size: 6rem;
+  text-align: right;
+  color: rgba(24, 58, 123, 0.941);
+}
+
+.qn1 {
+  padding: 10px;
+  text-align: left;
 }
 
 #grid-container {
   background-color: rgb(255, 255, 255);
-  border: 2px solid #f6a94b;
+  border: 2px solid rgba(128, 142, 21, 0.941);
   border-radius: 5px;
   min-height: 100px;
   padding: 20px;
@@ -106,43 +137,34 @@ h4 {
   grid-row: 2;
   display: flex;
   gap: 10px;
-  padding: 30px;
+  padding: 10px;
+  padding-left: 40px;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 #box3 {
-  grid-row: 4;
-  grid-column: 1;
+  grid-row: 3;
+  grid-column: 1/3;
   color: white;
   display: flex;
-  padding: 30px;
+  padding: 10px;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 #box4 {
-  grid-column: 1/3;
-  grid-row: 3;
+  grid-column: 4/6;
+  grid-row: 4;
   color: white;
   display: flex;
   gap: 10px;
-  padding-left: 30px;
+  padding: 20px;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
 #box5 {
-  grid-column: 4/5;
-  grid-row: 3;
-  display: flex;
-  gap: 10px;
-  padding-left: 30px;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-#box6 {
   grid-column: 1/4;
   grid-row: 2;
   display: flex;
@@ -152,8 +174,8 @@ h4 {
   align-items: flex-start;
 }
 
-#box7 {
-  grid-column: 4;
+#box6 {
+  grid-column: 3/6;
   grid-row: 3;
   display: flex;
   gap: 10px;
@@ -162,14 +184,14 @@ h4 {
   align-items: flex-start;
 }
 
-#box8 {
-  grid-column: 1/2;
-  grid-row: 3;
+#box7 {
+  grid-column: 1/4;
+  grid-row: 4;
   display: flex;
   gap: 10px;
-  padding-left: 30px;
+  padding: 30px;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: space-evenly;
 }
 
 /*column & row section was a different method for creating sections I tried out.*/
@@ -178,7 +200,8 @@ h4 {
   float: inline-start;
   width: 33.3%;
   padding: 2px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
 /* Clearfix (clear floats) */
