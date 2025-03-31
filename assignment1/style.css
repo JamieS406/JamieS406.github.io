@@ -15,8 +15,8 @@ as a nod to its design and also give cohesion to the overall aesthetic.*/
   font-weight: 400;
   font-style: normal;
 }
-/*main colour palette: Shades of Navy and a sage green. 
-Accent colour of orange, but used sparingly, for interest.
+/*main colour palette: Shades of navy and sky blue. 
+Accent colour of sage green, as body font, for visual interest.
 This colour scheme echoes the colours used in the website. */
 p {
   color: rgba(109, 121, 11, 0.941);
@@ -33,6 +33,7 @@ p {
   padding-bottom: 50px;
 }
 
+/*subtitle font for name: intentionally less contrasted against background, so title font can stand out*/
 h1 {
   color: rgba(49, 93, 175, 0.941);
   font-weight: bold;
@@ -55,11 +56,6 @@ h2 {
   text-align: center;
   padding: 20px;
   line-height: 4.5rem;
-}
-
-#para-2 {
-  text-align: left;
-  padding: 20px;
 }
 
 h3 {
@@ -149,6 +145,11 @@ for signposting, and allowed me to use the flex function in code!*/
 .qntitle {
   padding: 10px;
   text-align: left;
+}
+
+#para-2 {
+  text-align: left;
+  padding: 20px;
 }
 
 .sectionseg {
