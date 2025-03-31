@@ -17,7 +17,7 @@ as a nod to its design and also give cohesion to the overall aesthetic.*/
 }
 /*main colour palette: Shades of navy and sky blue. 
 Accent colour of sage green, as body font, for visual interest.
-This colour scheme echoes the colours used in the website. */
+This colour scheme is a limited version of the colours used in the website. */
 p {
   color: rgba(109, 121, 11, 0.941);
   font-family: "Arvo", sans-serif;
