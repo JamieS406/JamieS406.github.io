@@ -1,6 +1,11 @@
-/*change all non-text elements to px please
-- All padding
-- All line-height*/
+/*COLOUR CHOICES*/
+/*main colour palette: Shades of navy and sky blue. Accent colour of sage green.
+This colour scheme is a limited version of the colours used in the website.
+- I wanted to tint the background a little instead of a plain white background,
+for visual comfort and interest. */
+/*
+- All main title sections are a shade of navy.
+- Paragraph font sage green, the accent colour, for visual interest.*/
 
 body {
   background-color: aliceblue;
@@ -8,16 +13,30 @@ body {
   padding: 10px;
 }
 
+/*FONT CHOICES*/
 /* I intentionally tried to make the fonts similar to the website,
-as a nod to its design and also give cohesion to the overall aesthetic.*/
+as a nod to its design and also give cohesion to the overall aesthetic.
+A rule of thumb for me is to never go beyond 2 fonts in a piece of design: a title and body font.*/
+/* 
+- TITLE FONT: Boldonse regular - is bold and slightly angular while having a strange organic 
+quality to it, much like the title font for the website I researched. It is a free Google Font.
+- BODY FONT: Arvo sans-serif - is similar to the body font of the website, and so
+would not be so jarring when placed next to images of the website. It is also a free
+available font from Google Fonts. */
+
 .boldonse-regular {
   font-family: "Boldonse", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-/*main colour palette: Shades of navy and sky blue. 
-Accent colour of sage green, as body font, for visual interest.
-This colour scheme is a limited version of the colours used in the website. */
+
+/*NOTE ON CHARACTER COUNT + SIZING*/
+/*- After trial and error, I felt the standard 72ch per line was still too visually
+long. So 60ch per line was what I settled with after testing.
+- 1.6rem felt the best visually with this font; not too big that it feels clunky,
+but not so small that it's hard for readability.
+- Padding of 50px felt necessary at the bottom, to adequately separate each written section visually.*/
+
 p {
   color: rgba(109, 121, 11, 0.941);
   font-family: "Arvo", sans-serif;
@@ -33,7 +52,8 @@ p {
   padding-bottom: 50px;
 }
 
-/*subtitle font for name: intentionally less contrasted against background, so title font can stand out*/
+/* h1: subtitle font for name. 
+Colour is intentionally less contrasted against background, so title font can stand out*/
 h1 {
   color: rgba(49, 93, 175, 0.941);
   font-weight: bold;
@@ -45,6 +65,8 @@ h1 {
   text-align: center;
   padding: 20px;
 }
+
+/* h2: Topmost title font, for "ASSIGNMENT"*/
 h2 {
   color: rgba(24, 58, 123, 0.941);
   font-weight: bold;
@@ -58,6 +80,9 @@ h2 {
   line-height: 4.5rem;
 }
 
+/* h3: Secondary Topmost title font, for "ONE". Made it a little lighter in colour
+to add visual interest and reduce visual weight, especially when I'm overlapping the
+"ONE" on top of the "ASSIGNMENT" word.*/
 h3 {
   color: rgb(112, 167, 203);
   font-weight: bold;
@@ -67,6 +92,7 @@ h3 {
   line-height: 4rem;
 }
 
+/* h4: Main title font used for all question headers*/
 h4 {
   color: rgba(24, 58, 123, 0.941);
   font-weight: bold;
@@ -83,6 +109,7 @@ h4 {
   margin: 0 auto;
 }
 
+/*h5: font used for all question Numbers*/
 h5 {
   font-weight: 550;
   font-family: "Arvo", sans-serif;
@@ -92,6 +119,9 @@ h5 {
   color: rgba(24, 58, 123, 0.941);
 }
 
+/*SPECIAL INSTANCE COLOUR CLASSES*/
+/*- "whiteout" and "lopacwhite" were the special instance colour change classes used on fonts,
+especially on the navy background question blocks (Qn2, Qn9)*/
 .whiteout {
   color: aliceblue;
 }
@@ -100,7 +130,8 @@ h5 {
   color: rgba(240, 248, 255, 0.582);
 }
 
-/*column & row section was a different method for creating sections I tried out.*/
+/*ALTERNATIVE IMAGE FORMAT METHOD*/
+/*This column & row section was a different method for creating sections I tried out.*/
 .column {
   float: inline-start;
   width: 33.3%;
@@ -116,6 +147,7 @@ h5 {
   display: table;
 }
 
+/*li: Used in every unnumbered list instance*/
 li {
   color: rgba(128, 142, 21, 0.941);
   font-family: "Arvo", sans-serif;
@@ -129,8 +161,11 @@ li {
   max-width: 60ch;
 }
 
-/* having the numbers and text formatted this way felt better
-for signposting, and allowed me to use the flex function in code!*/
+/*QN NUMBER FORMATTING*/
+/* Having the numbers and text formatted this way (qn number big and bold, left. text question, centre align
+with number, to right of number) felt better for signposting, and allowed me to use the flex function in code!*/
+
+/*main container formatting each question header section*/
 .box_qn {
   width: 1200px;
   min-height: 100px;
@@ -147,11 +182,11 @@ for signposting, and allowed me to use the flex function in code!*/
   text-align: left;
 }
 
-#para-2 {
-  text-align: left;
-  padding: 20px;
-}
-
+/*SIDE-BY-SIDE QN FORMATTING*/
+/*I created a Flex box for side-by-side Qn Paras formatting, naming them as a class 
+"sectionseg". I use this formatting several times through the website, in order to better visually
+break up the paragraphs of answers,  so I decided flex boxes was the best way to do this, as
+they apply in classes (can use multiple instances) rather than ids (unique instances only).*/
 .sectionseg {
   max-width: 1400px;
   min-height: 100px;
@@ -161,6 +196,9 @@ for signposting, and allowed me to use the flex function in code!*/
   align-items: baseline;
 }
 
+/*I attempted to utilise the grid formatting for stacking the question container 
+flex box on top of the answer paragraphs. You can see I did this for q4,5,6,7. 
+I do recognise I can also do this as purely nested flexboxes, though!*/
 #q4_container {
   min-width: 700px;
   padding: 40px;
@@ -213,6 +251,7 @@ for signposting, and allowed me to use the flex function in code!*/
   grid-row: 2;
 }
 
+/* QN 2 MAIN GRID CONTAINER*/
 #grid-container1 {
   background-color: rgba(11, 37, 86, 0.941);
   border: 2px solid rgba(204, 226, 236, 0.941);
@@ -226,6 +265,8 @@ for signposting, and allowed me to use the flex function in code!*/
 }
 /* first row fraction 0.2 to accomodate img under title section */
 
+/* FROM QN 2 GRID:
+ box1 is question/title section*/
 #box1 {
   grid-column: 1/6;
   grid-row: 1/2;
@@ -235,6 +276,8 @@ for signposting, and allowed me to use the flex function in code!*/
   align-items: center;
 }
 
+/* FROM QN 2 GRID:
+ box2,3,4 are text sections*/
 #box2 {
   grid-column: 4/6;
   grid-row: 2;
@@ -268,7 +311,8 @@ for signposting, and allowed me to use the flex function in code!*/
   justify-content: flex-end;
   align-items: flex-start;
 }
-
+/* FROM QN 2 GRID:
+box5,6,7 are image sections*/
 #box5 {
   grid-column: 1/4;
   grid-row: 2;
@@ -312,6 +356,7 @@ for signposting, and allowed me to use the flex function in code!*/
   align-items: space-evenly;
 }
 
+/*QN 9 MAIN GRID CONTAINER*/
 #grid-container2 {
   background-color: rgba(11, 37, 86, 0.941);
   border: 2px solid rgba(204, 226, 236, 0.941);
@@ -329,12 +374,17 @@ for signposting, and allowed me to use the flex function in code!*/
   color: aliceblue;
 }
 
+/* FROM QN 9 GRID:
+boxA: Contains "o9title", question number, 
+and title question (text)*/
 #boxA {
   grid-column: 1/4;
   grid-row: 1;
   display: flex;
 }
 
+/* FROM QN 9 GRID:
+boxB: Contains initial answer to question 9, before elaboration.*/
 #boxB {
   grid-column: 1/4;
   grid-row: 2;
@@ -342,6 +392,8 @@ for signposting, and allowed me to use the flex function in code!*/
   justify-content: flex-end;
 }
 
+/* FROM QN 9 GRID:
+#imgstack is all 3 images as 1 box*/
 #imgstack {
   grid-column: 1/4;
   grid-row: 3;
@@ -353,6 +405,9 @@ for signposting, and allowed me to use the flex function in code!*/
   align-items: center;
 }
 
+/* FROM QN 9 GRID:
+boxC,D,E are the subtitles 
+for the associating images above it*/
 #boxC {
   grid-column: 1;
   grid-row: 4;

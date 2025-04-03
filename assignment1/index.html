@@ -17,7 +17,8 @@
     <h1>Jamie Seow</h1>
     <h2 class="boldonse-regular">Assignment</h2>
     <h3 class="boldonse-regular">—-——-—-—-—-ONE</h3>
-
+    <!--I'm formatting each question in a template flex box under "box_qn", and "qntitle".
+"box_qn" contains the question number and the question, while "qntitle" is the question itself, without the answer.-->
     <div class="box_qn">
       <h5>01</h5>
       <h4 class="qntitle">
@@ -30,6 +31,8 @@
       It corresponds with the themes unfolding in the website, adds visual
       interest and helps segment parts clearly.
     </p>
+    <!-- I tried a few ways to format images, and this was just one of the methods I tried first.
+     I also used grids to prove my understanding of what was taught in class!-->
     <div class="row">
       <div class="column">
         <img
@@ -49,11 +52,18 @@
         <img src="local_img/qn1_3.png" alt="screenshot1" style="scale: 100%" />
       </div>
 
+      <!--As there were many insights in this section, I wanted to intersperse images with 
+      the categories of actions and thoughts I had. A grid felt the most appropriate for this.-->
       <div id="grid-container1">
         <div id="box1">
           <div class="box_qn">
+            <!--the classes "whiteout" and "lopacwhite" are simply colour applications to specific
+            fonts, and they are to make the fonts "white" or "lower opacity white" coloured respectively.-->
+
+            <!--I used this workaround, as the font classes I used (h4,p) had existing colour attributes.
+             I needed to override these colour attributes only on selected instances.-->
             <h5 class="lopacwhite">02</h5>
-            <h4 class="whiteout" id="para-2">
+            <h4 class="whiteout">
               Spend two minutes with the experience and create a list of each of
               your discrete actions.
             </h4>
@@ -154,6 +164,15 @@
       cohesiveness of the narrative.
     </p>
 
+    <!--QN NUMBER FORMATTING-->
+    <!--Used grids (2 grids in 1 flexbox) in this "sectionseg"(flexbox) area to format 
+    the side-by-side question paragraphs. This is a nesting 
+    of my "box_qn" flexboxes within a grid, and then an overall flexbox for the desired effect.
+    Because it is a "class" attribute, though, I could use this class for all instances
+    of this formatting,and switched out the "id" identifiers where required, in Q6+7.
+
+    - More description in the CSS style file.-->
+
     <div class="sectionseg">
       <div id="q4_container">
         <h5>04</h5>
@@ -185,8 +204,11 @@
         </p>
       </div>
     </div>
+    <!--The line of underscores "____" below felt like the most efficient way to segment different areas
+    from each other, while also adding some padding too. Thus I used this method.-->
     <h4>_____________________________</h4>
 
+    <!--These images were taken from the website directly, copying the address-->
     <img
       src="https://gehry.getty.edu/_ipx/w_2000&f_webp&q_70/storyblok/cache/assets/3-01-2010_wdch_ext_sunrise_al_1_resized-10567181.jpg"
       alt="outside hall"
@@ -246,6 +268,14 @@
       viewer is aware of how the information is categorized, which is good for
       clarity of points.
     </p>
+
+    <!-- QN 9's GRID-->
+    <!--Similar principle of the grid from Qn 2 applied here.
+    Main difference is the naming conventions are different, 
+    so I didn't get confused (1,2,3 became A,B,C), and there 
+    is more image descriptions under the images here to draw 
+    parallels of the website to the exhibition.-->
+
     <div id="grid-container2">
       <div id="boxA" class="box_qn">
         <h5 class="lopacwhite">09</h5>
@@ -278,7 +308,6 @@
           width="89%"
           height="auto"
         />
-        <!-- unsure why the image won't stop warping?-->
       </div>
       <li class="lopacwhite" id="boxC">
         There is a short write-up beginning each section, with a simple
@@ -357,6 +386,11 @@
       the top of the screen, and it shows up!
     </p>
     <h4>_____________________________</h4>
+
+    <!--ENDING NOTE CLASS-->
+    <!--Had to make the ending note its own class because there was a 
+    few minor problems with the same padding settings used in the original
+    instance, and at the base of the website.-->
     <h3 class="boldonse-regular" id="endingnote">That's All, Thanks!</h3>
   </body>
 </html>
