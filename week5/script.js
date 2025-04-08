@@ -1,29 +1,71 @@
-// string variables = use quotes
-let myName = "Jamie";
-let myID = "s12345";
-let myCity = "Perth";
+// // string variables = use quotes
+// let myName = "Jamie";
+// let myID = "s12345";
+// let myCity = "Perth";
 
-//number variables
-let num = 30;
-let num2 = parseInt("40");
-let sum = num + num2;
-console.log("total is", sum);
+// //number variables
+// let num = 30;
+// let num2 = parseInt("40");
+// let sum = num + num2;
+// console.log("total is", sum);
 
 // + for addition as well as joining text
 //-b for subtraction
 // * for multipliayion
 // / division
 
-const weather = "rainy";
-const grade = 75;
+// const weather = "rainy";
+// const grade = 75;
+//_________
 
+let a = 120;
+let b = 80;
+
+function add(val1, val2) {
+  let sum = val1 + val2;
+  // console.log(sum);
+  return sum;
+}
+function subtract(val1, val2) {
+  let c = val1 - val2;
+  return c;
+}
+
+function whatIsMyGrade(marks) {
+  if (marks < 40) {
+    console.log("sorry you failed");
+    return "failed";
+  } else if (marks > 80) {
+    // console.log("You got HD");
+    return "HD";
+  } else {
+    return "pass";
+  }
+}
+
+let myMarks = 54;
+let myGrade = whatIsMyGrade(myMarks);
+console.log(myGrade);
+let total = add(10, 20);
+console.log(total);
+total = subtract(a, b);
+console.log(total);
+
+//___________
+
+// a = 23;
+// b=17;
+// c=a+b;
+// cpmsp;e/log(c);
+
+let grade = 40;
 if (grade >= 75) {
   console.log("I got distinction");
 } else {
   console.log("I failed the class");
 }
 const msg = `<h1> Today's weather is ${weather}
-<p> it is so nice to see the sun agaiin </p>
+<p> it is so nice to see the sun again </p>
 
 </h1>`;
 
@@ -60,22 +102,21 @@ console.log("Hello", myNewName, myCity);
 // or else use "let"
 //Variables: use smaller case first
 
-let a = 30;
-{
-  let a = 10;
-  console.log("Hello", a);
-}
-console.log("Hello", a);
+// let a = 30;
+// {
+//   let a = 10;
+//   console.log("Hello", a);
+// }
+// console.log("Hello", a);
 
-// let array = [2, 4, 6, 8, 10];
-// let student1 = "Jamie";
-// let student2 = "roger";
-// console.log(student1, student2);
-let studentArray = ["Jamie", "roger", "Sarah", "Julia", "janice", "Lucy"];
-// console.log("hello",studentArray[2]);
-// console.log("hello", studentArray[4]);
-// console.log("hello",studentArray[0]);
+// // let array = [2, 4, 6, 8, 10];
+// // let student1 = "Jamie";
+// // let student2 = "roger";
+// // console.log(student1, student2);
+// let studentArray = ["Jamie", "roger", "Sarah", "Julia", "janice", "Lucy"];
+// // console.log("hello",studentArray[2]);
+// // console.log("hello", studentArray[4]);
+// // console.log("hello",studentArray[0]);
 
-for (let i = 0; i < studentArray.length; i++) {
-  console.log("HELLO", studentArray[i]);
-}
+// for (let i = 0; i < studentArray.length; i++) {
+//   console.log("HELLO", studentArray[i]);
