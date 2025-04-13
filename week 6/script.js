@@ -1,6 +1,6 @@
 const myButton = document.querySelector("#my-button");
 console.log(myButton);
-myButton.addEventListener("click", handleClick);
+myButton.addEventListener("click", toggleMe);
 
 let course = "oof";
 
@@ -14,12 +14,17 @@ function addMe() {
   myCat.classList.add("round");
 }
 
-function handleClick() {
-  console.log("did you just click me?");
-
+function removeMe() {
+  myCat.classList.remove("round");
+}
+function toggleMe() {
+  let myCat = myCat.dataset.catname;
+  helloMsg.textContent = "Hi I am" + myCat;
   myCat.classList.toggle("round");
 }
 
+// function handleClick() {
+//     console.log("did you just click me?");
 // const header = document.querySelector("header");
 // console.log(header);
 // console.log(header.innerHTML);
