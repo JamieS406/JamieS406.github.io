@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript learning about DOM</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <h1 class="blue-color">Learning about DOM</h1>
-      <button id="my-button">Click Me!</button>
+      <button id="my-button">Toggle Me!</button>
     </header>
-    <img src="blogpost/cat.png" alt="my-cat" />
-    <p>this is a very awkward paragraph.</p>
+    <img
+      src="blogpost/cat.png"
+      alt="my-cat"
+      id="myCat"
+      data-catname="garfield"
+    />
+    <p id="hello">this is a very awkward paragraph.</p>
     <p class="blue-color">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis ex magni
       dicta aut quo eos, beatae eius praesentium tempore iusto autem ut quidem

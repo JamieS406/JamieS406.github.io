@@ -1,26 +1,26 @@
-const myButton = document.querySelector("#my-button");
+let myButton = document.querySelector("#my-button");
 console.log(myButton);
 myButton.addEventListener("click", toggleMe);
-
+let helloMsg = document.querySelector("#hello");
 let course = "oof";
 
-const myCat = document.querySelector("#my-cat");
+let myImg = document.querySelector("#myCat");
 console.log(myCat);
 
-myCat.addEventListener("mouseenter", addMe);
-myCat.addEventListener("mouseleave", removeMe);
+myImg.addEventListener("mouseenter", addMe);
+myImg.addEventListener("mouseleave", removeMe);
 
 function addMe() {
-  myCat.classList.add("round");
+  myImg.classList.add("round");
 }
 
 function removeMe() {
-  myCat.classList.remove("round");
+  myImg.classList.remove("round");
 }
 function toggleMe() {
-  let myCat = myCat.dataset.catname;
-  helloMsg.textContent = "Hi I am" + myCat;
-  myCat.classList.toggle("round");
+  let myName = myImg.dataset.catname;
+  helloMsg.textContent = "Hi I am" + myName;
+  myImg.classList.toggle("round");
 }
 
 // function handleClick() {
@@ -34,15 +34,15 @@ function toggleMe() {
 // console.log(topHeading);
 // console.log(topHeading.textContent);
 // topHeading.textContent = "This is my new top heading!";
-topHeading.style.color = "forestgreen";
+// topHeading.style.color = "forestgreen";
 
 //make sure you put "querySelectorAll"; if bottom is all then the top must be or else it'll get confused and stall, not work
-const allParas = document.querySelectorAll("p");
+let allParas = document.querySelectorAll("p");
 console.log(allParas);
 for (let i = 0; i < allParas.length; i++) {
   //   console.log(allParas[i].textContent);
   allParas[i].style.border = "2px solid brown";
-  allParas[i].style.backgroundColor = "aliceblue";
+  allParas[i].style.backgroundColor = "blue";
 }
 const sh1 = document.querySelector("#first-subheading");
 // console.log(sh1);
