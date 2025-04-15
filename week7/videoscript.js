@@ -3,7 +3,8 @@ console.log(topHeading);
 
 let myNewHeading = "";
 
-//TO FIGURE OUT: how to make the words above change upon play/pause button
+//To make the words above change upon play/pause button, NEED to define "myNewHeading" in top heirachy,
+//even if theres nothing inside, to ensure that the code knows the function exists
 
 const starVideo = document.querySelector("#star-video");
 console.log(starVideo);
@@ -32,4 +33,24 @@ function pauseVideo() {
   myNewHeading = "Video is paused";
   starVideo.pause();
   topHeading.textContent = myNewHeading;
+}
+
+//________________________________
+
+const playPauseButton = document.querySelector("#play-pause-button");
+console.log(playPauseButton);
+
+playPauseButton.addEventListener("click", toggleVideo);
+
+const playPauseImg = document.querySelector("#play-pause-img");
+console.log(playPauseImg);
+
+function toggleVideo() {
+  if (starVideo.paused || starVideo.ended) {
+    starVideo.play();
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+  } else {
+    starVideo.pause();
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+  }
 }
