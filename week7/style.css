@@ -1,0 +1,30 @@
+audio,
+video {
+  display: block;
+  margin: bottom 20px;
+}
+
+video {
+  width: 600px;
+  height: 400px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  /*pointer is added upon hover, for good UI*/
+}
+
+button:hover {
+  scale: 0.9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-style: bold;
+  font-family: "montserrat", sans-serif;
+  font-optical-sizing: auto;
+  padding-top: 3rem;
+}
