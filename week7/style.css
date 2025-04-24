@@ -1,7 +1,14 @@
+/*standard class can be used across all sections*/
+:root {
+  --pri-color: rgb(72, 190, 64);
+  --my-padding: 10px;
+}
+
 audio,
 video {
   display: block;
   margin: bottom 20px;
+  text-align: center;
 }
 
 video {
@@ -14,6 +21,8 @@ button {
   font-size: 1.1rem;
   border-radius: 20px;
   cursor: pointer;
+  background-color: var(--pri-color);
+
   /*pointer is added upon hover, for good UI*/
 }
 
