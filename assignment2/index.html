@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Art Time</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- add the font family of your choice -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,16 +22,16 @@
   <body>
     <!-- Header Section -->
     <header>
-      <h1>Media Player Website</h1>
+      <h2>Art Time :)</h2>
     </header>
 
     <!-- Navigation Section -->
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
+        <li><a href="#">Crafts</a></li>
         <li><a href="#">Music</a></li>
-        <li><a href="#">Playlists</a></li>
+        <li><a href="#">About</a></li>
         <!-- Add or remove navigation items as needed -->
       </ul>
     </nav>
@@ -35,47 +39,141 @@
     <!-- Main Content Section -->
     <main class="container">
       <!-- Additional Content Section -->
-      <section>
-        <h3>DIY - Windmill Craft Time!</h3>
-        <p>
-          Fun and breezy day outside, and want a simple craft to enjoy the day
-          better with? Today we’re going to show you step-by-step how to create
-          your very own quick and easy windmill during art time, safe and
-          suitable for all ages!
-        </p>
-        <!-- Add more content as needed -->
+      <section class="box_qn">
+        <section>
+          <h3>DIY - Windmill Art Time!</h3>
+          <p>
+            Fun and breezy day outside, and want a simple craft to enjoy the day
+            better with? Today we’re going to show you step-by-step how to
+            create your very own quick and easy windmill during art time, safe
+            and suitable for all ages!
+          </p>
+        </section>
+        <img
+          src="local_img2/windmill_img.png"
+          alt="windmill front drawing"
+          style="scale: 110%"
+        />
       </section>
 
       <!-- Media Player Section -->
-      <div class="media-player">
-        <video id="custom-video-player" controls>
-          <source
-            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="custom-controls">
-          <button id="play-pause-btn" onclick="togglePlayPause()">
+      <h2>Video Tutorial</h2>
+      <p>Video Credit: Berry Bunch Family</p>
+      <section class="box_qn">
+        <div class="media-player">
+          <video id="custom-video-player" controls>
+            <source
+              src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="custom-controls">
+            <button id="play-pause-btn" onclick="togglePlayPause()">
+              <img
+                id="play-pause-img"
+                src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+                alt="Play Button"
+                width="24"
+                height="24"
+              />
+            </button>
+            <!-- add the missing buttons or functionality here -->
+            <div class="progress-bar">
+              <span id="progress-bar-fill"></span>
+            </div>
+          </div>
+          <p id="annotation">
+            ⇊ For side-by-side of video with tutorial instructions!
+          </p>
+          <button id="PipButton">
             <img
-              id="play-pause-img"
-              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
-              alt="Play Button"
-              width="24"
-              height="24"
+              src="https://cdn4.iconfinder.com/data/icons/remixicon-media/24/picture-in-picture-2-line-512.png"
+              alt="picinpic"
             />
           </button>
-          <!-- add the missing buttons or functionality here -->
-          <div class="progress-bar">
-            <span id="progress-bar-fill"></span>
-          </div>
+          <ul>
+            <li>Introduction (0:02)</li>
+            <li>Materials required (0:14)</li>
+            <h1>Section 1: Making the turning part of windmill</h1>
+            <li>Step 1: Prepare foam piece square (0:29)</li>
+            <li>Step 2: Folding foam piece (0:42)</li>
+            <li>Step 3: Make hole in middle of foam piece (0:53)</li>
+            <li>Step 4: Make cuts on foam piece (1:02)</li>
+            <li>
+              - How turning part of windmill should look at prep stage (1:11)
+            </li>
+            <li>Step 5: Where to put glue on foam piece (1:21)</li>
+            <li>Step 6: Folding foam sections (1:36)</li>
+            <h1>Making Foam Washers</h1>
+            <li>Step 7: Taking foam scraps to make washers (2:06)</li>
+            <li>Step 8: Making shape of washer (2:12)</li>
+            <li>Step 9: Cutting shape of washer (2:23)</li>
+            <li>Step 10: Hole in washer (2:27)</li>
+            <h1>Assembling the Windmill</h1>
+            <li>Step 11: Wrapping pipe cleaner around straw (2:48)</li>
+            <li>
+              Step 12: Combine washer and turning part of windmill onto pipe
+              cleaner (2:58)
+            </li>
+            <li>
+              Step 13: Cutting off and securing pipe cleaner (3:26) Finished
+              windmill (3:56)
+            </li>
+            <li>Additional tips (4:05)</li>
+          </ul>
         </div>
-      </div>
-
+        <ul id="mat-list">
+          <h2>Materials:</h2>
+          <li>Sheets of foam (12.5 x 12.5cm)</li>
+          <li>Pair of scissors</li>
+          <li>Glue dots/glue</li>
+          <li>Ruler</li>
+          <li>Pen</li>
+          <li>Paper straws</li>
+          <li>Craft pipe Cleaners (the thinner the better)</li>
+        </ul>
+      </section>
       <!-- Additional Content Section -->
-      <section>
-        <h2>Additional Content</h2>
-        <p>This is where you can showcase any other relevant content.</p>
-        <!-- Add more content as needed -->
+      <h2>Instructions</h2>
+      <section class="box_qn">
+        <section>
+          <h1>Section 1: Making the turning part of windmill</h1>
+          <p>
+            Step 1: Cut your foam sheet into a 12.5 x 12.5cm square. Keep the
+            scraps of foam, we will use this later.
+          </p>
+          <button>Jump to Step 1</button>
+        </section>
+        <img src="local_img2/foamsheet.png" alt="foam sheet" />
+      </section>
+
+      <section class="box_qn">
+        <section>
+          <p>
+            Step 2: Fold the square diagonally in half to make a triangle Press
+            that down, and then turn it around and fold in half diagonally the
+            other way as well, as shown.
+          </p>
+          <button>Jump to Step 2</button>
+        </section>
+        <img src="local_img2/fold_2.png" alt="fold step 2" />
+      </section>
+
+      <section class="box_qn">
+        <section>
+          <p>
+            Step 3: Make a hole in the middle, where the creases meet Make some
+            cuts about halfway along each crease. Add a hole near the top of
+            every edge of the square, as shown.
+          </p>
+
+          <p>
+            You should end up with a hole in the middle and a hole on every
+            other side, as shown here.
+          </p>
+          <button>Jump to Step 3</button>
+        </section>
+        <img src="local_img2/poke_3.png" alt="poke hole step 3" />
       </section>
     </main>
 

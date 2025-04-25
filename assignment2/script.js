@@ -19,3 +19,18 @@ function updateProgressBar() {
   progressBar.style.width = value + "%";
 }
 // Add other functionalities here
+
+//Picture-in-Picture button function
+const PipButton = document.querySelector("#PipButton");
+
+PipButton.addEventListener("click", OpenPip);
+console.log(PipButton);
+
+function OpenPip() {
+  if (document.pictureInPictureEnabled) {
+    video.requestPictureInPicture();
+  } else if (document.pictureInPictureElement) {
+    document.exitPictureInPicture();
+  }
+}
+//Ask if it's okay if I change the playhead thing so i can have timestamps

@@ -1,17 +1,26 @@
 :root {
   --primary-bg-color: #f4f4f4;
-  --text-color: #333;
-  --main-bg-color: #333;
+  --text-color: #430032;
+  --main-bg-color: #430032;
   --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
-}
-
-body {
+  --main-btn-bg-color: #f7cb17;
 }
 
 h1 {
-  font-family: "raleway";
+  font-family: "nunito";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
+
+h2 {
+  font-family: "nunito", cursive;
+  font-weight: 900;
+  font-style: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 h3 {
   font-family: "Unkempt", cursive;
   font-weight: 900;
@@ -20,16 +29,23 @@ h3 {
   line-height: 4rem;
 }
 p {
-  font-family: "arial";
+  font-family: "nunito";
   font-size: 1rem;
+  max-width: 50ch;
 }
 ul {
+  font-family: "nunito";
   margin: 0;
   padding: 0;
 }
 
+#play-pause-btn {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "nunito", sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -38,8 +54,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
-/* Add additional styles as needed */
 
 /* Create a container for the main content */
 .container {
@@ -83,7 +97,7 @@ nav a {
   padding-top: 20px;
   width: 100%;
   margin: 0 auto;
-  align-items: right;
+  align-items: center;
 }
 
 .media-player video {
@@ -126,10 +140,31 @@ nav a {
   transition: width 0.3s ease;
 }
 
-#pipButton {
-  font-family: "raleway";
+/* Picture-in-picture feature*/
+#PipButton {
+  font-family: "nunito";
   max-width: 20ch;
+  width: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1rem;
+  background-color: var(--main-btn-bg-color);
+  cursor: pointer;
 }
+
+button:hover {
+  scale: 0.9;
+}
+
+#annotation {
+  font-family: "nunito";
+  max-width: 23ch;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  padding: 10px;
+}
+
 /* Footer styling */
 footer {
   background-color: var(--main-bg-color);
@@ -137,4 +172,19 @@ footer {
   text-align: center;
   padding: 10px 0;
   width: 100%;
+}
+
+/*Grid class*/
+.box_qn {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+#mat-list {
+  padding: 20px;
+  padding-left: 40px;
 }
