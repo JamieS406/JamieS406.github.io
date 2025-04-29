@@ -18,17 +18,18 @@ function updateProgressBar() {
   const value = (video.currentTime / video.duration) * 100;
   progressBar.style.width = value + "%";
 }
-// Add other functionalities here
-
-//Picture-in-Picture button function
+//Picture-in-Picture button function:
+//fetching PiP button
 const PipButton = document.querySelector("#PipButton");
 
 PipButton.addEventListener("click", OpenPip);
 console.log(PipButton);
 
+//If the Picture in Picture(PiP) is not enabled, pressing the PiP icon will enable/open PiP window.
 function OpenPip() {
   if (document.pictureInPictureEnabled) {
     video.requestPictureInPicture();
+    //If the Picture in Picture(PiP) is open, pressing the PiP icon will exit/close PiP window.
   } else if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
@@ -36,8 +37,15 @@ function OpenPip() {
 
 //Ask if it's okay if I change the playhead thing so i can have timestamps
 
-//Attempting timestamping
+//METHOD 1 Proof-of-concept: EventListener Method
+//As learnt in class
+//fetching step1 button
+const a2_step1Button = document.querySelector("#AstepOne");
 const step1Button = document.querySelector("#stepOne");
+
+//listen for click on that button
+a2_step1Button.addEventListener("click", oneStamp);
+console.log(AstepOne);
 
 step1Button.addEventListener("click", oneStamp);
 console.log(stepOne);
@@ -45,30 +53,18 @@ console.log(stepOne);
 function oneStamp() {
   video.currentTime = 29;
 }
+//__________________________________________
+//METHOD 2: "On Click" Method
+//I used this method as it reduces the lines of code I need for the same function on different timestamps.
+//I'm aware this puts a functionality into HTML, which should be purely for base format
+//However I feel this method makes sense for my website, as I have a lot of repeating buttons,
+//Which could make a simple instruction very clunky.
 
-const step2Button = document.querySelector(".stepTwo");
+//sending function name to console
+console.log(timeStamp);
 
-step2Button.addEventListener("click", twoStamp);
-console.log(stepTwo);
-
-function twoStamp() {
-  video.currentTime = 42;
-}
-
-const step3Button = document.querySelector("#stepThree");
-
-step3Button.addEventListener("click", threeStamp);
-console.log(stepThree);
-
-function threeStamp() {
-  video.currentTime = 53;
-}
-
-const step4Button = document.querySelector("#stepFour");
-
-step4Button.addEventListener("click", fourStamp);
-console.log(stepFour);
-
-function fourStamp() {
-  video.currentTime = 81;
+//function applied to all timestampped events (all Step buttons); appropriate timestamps are listed
+//in the "onclick" section of the designated steps, eg. StepTwo's timestamp(42) in seconds.
+function timeStamp(seconds) {
+  video.currentTime = seconds;
 }
