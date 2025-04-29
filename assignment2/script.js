@@ -51,6 +51,7 @@ step1Button.addEventListener("click", oneStamp);
 console.log(stepOne);
 
 function oneStamp() {
+  video.play();
   video.currentTime = 29;
 }
 //__________________________________________
@@ -66,5 +67,6 @@ console.log(timeStamp);
 //function applied to all timestampped events (all Step buttons); appropriate timestamps are listed
 //in the "onclick" section of the designated steps, eg. StepTwo's timestamp(42) in seconds.
 function timeStamp(seconds) {
+  video.play();
   video.currentTime = seconds;
 }

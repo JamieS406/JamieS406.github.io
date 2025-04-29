@@ -6,13 +6,16 @@
   --main-btn-bg-color: #f7cb17;
 }
 
+/* Title font */
 h1 {
-  font-family: "nunito";
-  font-style: bold;
+  font-family: "Unkempt", cursive;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-style: bold;
+  font-size: 4rem;
+  line-height: 4rem;
 }
 
+/* header font */
 h2 {
   font-family: "nunito", cursive;
   font-weight: 900;
@@ -21,59 +24,40 @@ h2 {
   line-height: 2rem;
 }
 
+/* subheader font */
 h3 {
-  font-family: "Unkempt", cursive;
-  font-weight: 900;
+  font-family: "nunito";
   font-style: bold;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-weight: 900;
+  font-size: 1.2rem;
 }
+
 p {
   font-family: "nunito";
   font-size: 1rem;
   max-width: 50ch;
+  margin-top: 2px;
+  margin-bottom: 5px;
 }
 ul {
   font-family: "nunito";
   margin: 0;
   padding: 0;
 }
-/**/
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-}
 
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #04aa6d;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04aa6d;
-  cursor: pointer;
-}
-/**/
-
-#play-pause-btn {
+button {
+  color: #ddd;
+  border: none;
   border-radius: 10px;
+  padding: 9px;
+  background-color: var(--text-color);
   cursor: pointer;
+  margin-top: 2px;
+}
+
+/* makes button decrease in size upon hover to indicate interactability to user */
+button:hover {
+  scale: 0.9;
 }
 
 body {
@@ -87,6 +71,10 @@ body {
   justify-content: space-between;
 }
 
+/* curate size of brand name "Art Time", while maintaining the font styling of h3*/
+#brandname {
+  font-size: 2.5rem;
+}
 /* Create a container for the main content */
 .container {
   max-width: 1000px;
@@ -140,9 +128,37 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-top: 10px;
   width: 100%;
+}
+
+#play-pause-btn {
+  border-radius: 10px;
+  height: 44px;
+  cursor: pointer;
+}
+
+/* Picture-in-picture feature*/
+#PipButton {
+  width: 52px;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  padding: 6px;
+  background-color: var(--main-btn-bg-color);
+  cursor: pointer;
+}
+
+#startButton {
+  width: 55px;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  padding: 6px;
+  justify-content: center;
+  background-color: var(--main-btn-bg-color);
+  cursor: pointer;
 }
 
 .custom-controls button {
@@ -172,26 +188,22 @@ nav a {
   transition: width 0.3s ease;
 }
 
-/* Picture-in-picture feature*/
-#PipButton {
-  font-family: "nunito";
-  max-width: 20ch;
-  width: 40px;
-  border: none;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 1rem;
-  background-color: var(--main-btn-bg-color);
-  cursor: pointer;
+#playersection {
+  margin-bottom: 90px;
 }
 
-button:hover {
-  scale: 0.9;
+.step-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1px;
+  width: 100%;
 }
 
 #annotation {
   font-family: "nunito";
-  max-width: 23ch;
+  max-width: 70ch;
   font-size: 0.8rem;
   line-height: 1rem;
   padding: 10px;
