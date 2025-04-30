@@ -38,7 +38,7 @@
 
     <!-- Main Content Section -->
     <main class="container">
-      <!-- Additional Content Section -->
+      <!-- Introduction Content Section -->
       <section class="box_qn">
         <section>
           <h1>DIY - Windmill Art Time!</h1>
@@ -68,6 +68,7 @@
               type="video/mp4"
             />
           </video>
+          <!-- Media controls Section -->
           <div class="custom-controls">
             <button id="play-pause-btn" onclick="togglePlayPause()">
               <img
@@ -89,7 +90,6 @@
               src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
               alt="Previous Button"
             /></button>
-            <!-- add the missing buttons or functionality here -->
             <div class="progress-bar">
               <span id="progress-bar-fill"></span>
             </div>
@@ -97,6 +97,7 @@
           <p id="annotation">
             *2nd button after the play button is for side-by-side of video with tutorial instructions!
           </p>
+          <!-- Jump-to-step Section -->
           <section class="step-controls">
           <button id="AstepOne">Step 1</button>
           <button id="2_stepTwo" onclick="timeStamp(43)">Step 2</button>
@@ -107,9 +108,10 @@
           <button id="2_stepSeven" onclick="timeStamp(168.5)">Step 7</button>
           <button id="2_stepEight" onclick="timeStamp(206.30)">Step 8</button>
           <button id="2_finish" onclick="timeStamp(236)">Finish!</button>
-          <button id="AddTips"onclick="timeStamp(245)">Additional Tips</button>
+          <button id="AddTips"onclick="timeStamp(246.5)">Additional Tips</button>
         </section>
         </div>
+        <!-- Material list beside media players and steps Section -->
         <ul id="mat-list">
           <h2>Materials:</h2>
           <li>Sheets of foam (to cut into 12.5 x 12.5cm)</li>
@@ -123,16 +125,20 @@
         </ul>
       </section>
       <p>________________________</p>
-    </section>     
+    </section>  
+    <!-- Instructions Section -->   
       <article>
         <section class="box_qn">
           <section>
-            <h2>Instructions</h2>
+            <div class="section_div"><h2>Instructions</h2>
             <h3>Part A: Making the turning part of windmill</h3>
-            <p>
-              Step 1: Cut your foam sheet into a 12.5 x 12.5cm square. Keep the
+          </div>
+            <h3>Step 1:</h3>
+            <p>Cut your foam sheet into a 12.5 x 12.5cm square. Keep the
               scraps of foam, we will use this later.
             </p>
+            <!-- Every step has a "jump to step" button that takes the video to that steps' timestamp,
+             and opens up the Picture-in-Picture window, which plays automatically too. -->
             <button id="stepOne" onclick="OpenPip()">Jump to Step 1</button>
           </section>
           <img src="local_img2/foamsheet.png" alt="foam sheet" />
@@ -140,11 +146,12 @@
 
         <section class="box_qn">
           <section>
-            <p>
-              Step 2: Fold the square diagonally in half to make a triangle
+            <h3>Step 2:</h3>
+            <p> Fold the square diagonally in half to make a triangle
               Press that down, and then turn it around and fold in half
               diagonally the other way as well, as shown.
             </p>
+            <!--'Jump-to-step button'-->
             <button id="stepTwo" onclick="timeStamp(43),OpenPip()"> Jump to Step 2</button>
           </section>
           <img src="local_img2/fold_2.png" alt="fold step 2" />
@@ -152,8 +159,8 @@
 
         <section class="box_qn">
           <section>
-            <p>
-              Step 3: Make a hole in the middle, where the creases meet. Make
+            <h3>Step 3:</h3>
+            <p> Make a hole in the middle, where the creases meet. Make
               some cuts about halfway along each crease. Add a hole near the top
               of every edge of the square, as shown.
             </p>
@@ -169,8 +176,8 @@
 
         <section class="box_qn">
           <section>
-            <p>
-              Step 4: Add a bit of glue over the hole on each corner. Take each
+            <h3>Step 4:</h3>
+            <p> Add a bit of glue over the hole on each corner. Take each
               glued corner and fold them inwards to the center, to create the
               image shown.
             </p>
@@ -183,9 +190,9 @@
       <article>
         <section class="box_qn">
           <section>
-            <h3>Part B: Making Foam Washers</h3>
-            <p>
-              Step 5: Collecting the off-cuts of foam left over from cutting the 12.5cm x 12.5cm foam square, use a glue stick cap to press down on the foam, making a circular impression.
+            <h3 class="section_div">Part B: Making Foam Washers</h3>
+            <h3>Step 5:</h3>
+            <p>Collecting the off-cuts of foam left over from cutting the 12.5cm x 12.5cm foam square, use a glue stick cap to press down on the foam, making a circular impression.
             </p>
             <button id="stepFive" onclick="timeStamp(126),OpenPip()">Jump to Step 5</button>
           </section>
@@ -194,8 +201,8 @@
 
         <section class="box_qn">
           <section>
-            <p>
-              Step 6: Cut the circular impressions out, and put a hole straight through the middle of each.
+            <h3>Step 6:</h3>
+            <p>Cut the circular impressions out, and put a hole straight through the middle of each.
             </p>
             <button id="stepSix" onclick="timeStamp(143.5),OpenPip()">Jump to Step 6</button>
           </section>
@@ -204,9 +211,9 @@
 
         <section class="box_qn">
           <section>
-            <h3>Part C: Assembling the Windmill</h3>
-            <p>
-              Step 7: Take a pipe cleaner and wrap it around the straw so it's fairly tight. 
+            <h3 class="section_div">Part C: Assembling the Windmill</h3>
+            <h3>Step 7:</h3>
+            <p> Take a pipe cleaner and wrap it around the straw so it's fairly tight. 
               Put a washer all the way to the end of the pipe cleaner, put the turning part of the windmill, and then put another washer on top, like a sandwich.
             </p>
             <button id="stepSeven" onclick="timeStamp(168.5),OpenPip()">Jump to Step 7</button>
@@ -216,8 +223,8 @@
 
         <section class="box_qn">
           <section>
-            <p>
-              Step 8: Using a pair of scissors, twist the pipe cleaner tighter, and cut excess pipe cleaner off. Coil the pipe cleaner down to the turning part of the windmill to secure off the end. Make sure to adjust the spacing between the turning part and the washers, so that the turning part can still move when pushed/blowed.
+            <h3>Step 8:</h3>
+            <p>Using a pair of scissors, twist the pipe cleaner tighter, and cut excess pipe cleaner off. Coil the pipe cleaner down to the turning part of the windmill to secure off the end. Make sure to adjust the spacing between the turning part and the washers, so that the turning part can still move when pushed/blowed.
             </p>
             <button id="stepEight" onclick="timeStamp(206.30),OpenPip()">Jump to Step 8</button>
           </section>
@@ -244,6 +251,10 @@
       <a href="https://icons8.com/icon/59862/play">Play</a> icon by
       <a href="https://icons8.com">Icons8</a>
       <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://www.iconfinder.com/search?q=picture%20in%20picture">Picture-in-Picture</a> icon by
+      <a href="https://www.iconfinder.com">Iconfinder</a>
+      <a href="https://icons8.com/icon/YTSDoX6z463S/skip-to-start">Skip to start</a> icon by
       <a href="https://icons8.com">Icons8</a>
     </footer>
   </body>
