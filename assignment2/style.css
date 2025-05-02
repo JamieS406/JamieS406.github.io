@@ -150,6 +150,7 @@ nav a {
   cursor: pointer;
 }
 
+/*Skip to start button styling*/
 #startButton {
   width: 55px;
   height: 44px;
@@ -188,6 +189,7 @@ nav a {
   transition: width 0.3s ease;
 }
 
+/*Grid for formatting jump-to-timestamp step buttons below media player*/
 .step-controls {
   display: flex;
   flex-direction: row;
@@ -205,13 +207,9 @@ nav a {
   padding: 10px;
 }
 
-/* Footer styling */
-footer {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  text-align: center;
-  padding: 10px;
-  width: 100%;
+#mat-list {
+  padding: 20px;
+  padding-left: 40px;
 }
 
 /*Grid class*/
@@ -225,10 +223,16 @@ footer {
   margin-bottom: 50px;
 }
 
+/*Section A, B, C specific formatting to create appropriate spacing*/
 .section_div {
   margin-bottom: 20px;
 }
-#mat-list {
-  padding: 20px;
-  padding-left: 40px;
+
+/* Footer styling */
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
 }

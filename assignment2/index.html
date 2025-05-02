@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Time</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <!-- add the font family of your choice -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,11 +26,19 @@
     </header>
 
     <!-- Navigation Section -->
+    <!-- I thought keeping the navigation section in would 
+     be good in simulating an actual art-and-craft website, where
+     this craft tutorial (windmill) is simply one of many. 
+     Home: Main page
+     Crafts: Available tutorials
+     Supplies: where to source for materials/is
+     sold by the website's online store
+     About: creator background, history of website creation.--> 
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Crafts</a></li>
-        <li><a href="#">Music</a></li>
+        <li><a href="#">Supplies</a></li>
         <li><a href="#">About</a></li>
         <!-- Add or remove navigation items as needed -->
       </ul>
@@ -79,12 +87,15 @@
                 height="24"
               />
             </button>
+            <!-- Picture-in-Picture Button: so users following the tutorial can scroll to written +
+             illustrated instructions of the steps, while following the video side-by-side. -->
             <button id="PipButton">
               <img
                 src="https://cdn4.iconfinder.com/data/icons/remixicon-media/24/picture-in-picture-2-line-512.png"
                 alt="picinpic"
               />
             </button>
+            <!-- Jump-to-start Button: so users can go to before step one, intro part -->
             <button id="startButton" onclick="timeStamp(2)"><img
               id="previous-img"
               src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
@@ -94,6 +105,8 @@
               <span id="progress-bar-fill"></span>
             </div>
           </div>
+          <!-- Explaining Picture-in-Picture button, as it is not as common a button to most users as, 
+           say, a playhead/pause button or a jump-to-start button -->
           <p id="annotation">
             *2nd button after the play button is for side-by-side of video with tutorial instructions!
           </p>
@@ -245,7 +258,7 @@
       </article>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer Section: credits for icons-->
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>
       <a href="https://icons8.com/icon/59862/play">Play</a> icon by

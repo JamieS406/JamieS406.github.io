@@ -35,8 +35,6 @@ function OpenPip() {
   }
 }
 
-//Ask if it's okay if I change the playhead thing so i can have timestamps
-
 //METHOD 1 Proof-of-concept: EventListener Method
 //As learnt in class
 //fetching step1 button
