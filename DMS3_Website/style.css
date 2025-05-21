@@ -1,8 +1,57 @@
+:root {
+  --primary-bg-color: #ededed;
+  --text-color: #000000;
+  --main-text-color: #245436;
+  --main-btn-bg-color: #818181;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Recursive", Mono Linear Static;
+}
+
+body {
+  color: var(--main-text-color);
+  position: relative;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 100;
+  line-height: 0.9;
+  letter-spacing: 4px;
+}
+
+h2 {
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-top: 20px;
+  max-width: 40ch;
+  color: #333;
+  line-height: 1.5;
 }
 
 /* Fixed background wrapper */
@@ -12,7 +61,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #ededed 50%, #a8e063 80%, #56275b 100%);
+  background: linear-gradient(45deg, #ededed 50%, #abea5e 80%, #750a81 100%);
   z-index: -10;
 }
 
@@ -38,4 +87,89 @@ nav {
   z-index: 100;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: colour 0.3s;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Vertical navigation on the right */
+.side-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  z-index: 100;
+}
+
+/* Decorative elements */
+.blob {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.522);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  right: -5%;
+  top: 20%;
+  z-index: -1;
+  box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
+}
+
+.oval-outline {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 1s ease-out;
+}
+
+.oval-outline-1 {
+  width: 400px;
+  height: 180px;
+  left: -200px;
+  top: 0px;
+  transform: rotate(15deg);
+}
+
+.oval-outline-2 {
+  width: 400px;
+  height: 150px;
+  left: -200px;
+  top: 40px;
+  transform: rotate(15deg);
+}
+
+.oval-outline-3 {
+  width: 2000px;
+  height: 900px;
+  left: 1200px;
+  top: 100px;
+  transform: rotate(15deg);
+}
+
+/* Small decorative squares */
+.squares {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+}
+
+.square {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 5px;
+  display: inline-block;
 }
