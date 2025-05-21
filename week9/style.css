@@ -1,6 +1,8 @@
 /* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
 
 body {
+  background-image: url(a3_bg_1_1.png);
+  background-size: cover;
   background-color: #1a120b;
   display: flex;
   text-align: center;
@@ -156,6 +158,14 @@ input:hover {
   100% {
     rotate: 360deg;
   }
+}
+
+#ring_1 {
+  transform: scale 0.5s ease;
+  animation-name: loading;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 #heart-icon {
