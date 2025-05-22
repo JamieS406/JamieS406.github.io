@@ -18,7 +18,7 @@ document.addEventListener("mousemove", function (e) {
     oval2.style.transform = `rotate(5deg) translate(${moveX * -0.3}px, ${
       moveY * 0.5
     }px)`;
-    oval3.style.transform = `rotate(2deg) translate(${moveX * -0.3}px, ${
+    oval3.style.transform = `rotate(4deg) translate(${moveX * 0.3}px, ${
       moveY * 0.8
     }px)`;
   }
