@@ -1,7 +1,7 @@
 :root {
   --primary-bg-color: #ededed;
   --text-color: #000000;
-  --main-text-color: #245436;
+  --main-text-color: #111412;
   --main-btn-bg-color: #818181;
 }
 
@@ -45,11 +45,28 @@ h2 {
   letter-spacing: -1px;
 }
 
+h3 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: normal;
+  max-width: 20ch;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: normal;
+  max-width: 30ch;
+  letter-spacing: -1px;
+}
+
 .subtitle {
   font-size: 1.2rem;
   max-width: 600px;
   margin-top: 20px;
-  max-width: 40ch;
+  max-width: 25ch;
   color: #333;
   line-height: 1.5;
 }
@@ -175,17 +192,23 @@ nav a:hover {
 }
 
 /* Content sections */
+#intro {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: linear-gradient(0deg, #edededd4 90%, #ffffff00 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .content-section {
   min-height: 100vh;
   padding: 100px 10%;
-  background: linear-gradient(100deg, #edededd5 80%, #baf1775f 100%);
-  margin: 20px 0;
+  background: linear-gradient(0deg, #edededd4 100%, #ffffff00 100%);
   margin-left: auto;
   margin-right: auto;
 }
 
 .section-title {
-  font-size: 3rem;
   margin-bottom: 30px;
 }
 
