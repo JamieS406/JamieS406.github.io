@@ -58,9 +58,23 @@ body {
 }
 
 .ferris,
-.hammergame,
-.caro_full,
 .sell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hammergame {
+  scale: 1.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caro_full {
+  margin: -20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,14 +225,45 @@ button:hover {
 
 #stalls {
   position: relative;
-  width: 200px;
+  width: 260px;
   height: 200px;
   position: absolute;
 }
 
+#lights {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  margin: 100px;
+  z-index: 2;
+}
+#string {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  margin: 100px;
+  z-index: 1;
+}
+
 #extra {
   position: absolute;
-  width: 200px;
+  width: 190px;
+}
+
+#string_extra {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  margin: 100px;
+  z-index: 1;
+}
+
+#light_extra {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  margin: 100px;
+  z-index: 2;
 }
 
 /* so each horse is placed on its diameter using translateZ */
@@ -271,6 +316,10 @@ button:hover {
   0%,
   100% {
     transform: translateY(0);
+  }
+  11%,
+  12% {
+    transform: translateY(-280px);
   }
   10%,
   50% {
