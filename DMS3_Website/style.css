@@ -12,6 +12,10 @@
   font-family: "Recursive", Mono Linear Static;
 }
 
+p {
+  max-width: 50ch;
+}
+
 body {
   color: var(--main-text-color);
   position: relative;
@@ -51,6 +55,7 @@ h3 {
   font-weight: normal;
   max-width: 20ch;
   margin-bottom: 2rem;
+  line-height: 1;
   letter-spacing: -1px;
 }
 
@@ -58,7 +63,7 @@ h4 {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: normal;
-  max-width: 30ch;
+  max-width: 50ch;
   letter-spacing: -1px;
 }
 
@@ -97,7 +102,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-style: italic;
-  color: white;
+  color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
   width: 100%;
@@ -107,14 +112,14 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 0 10px;
   transition: colour 0.3s;
 }
 
 nav a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(157, 157, 157);
 }
 
 /* Vertical navigation on the right */
@@ -122,6 +127,7 @@ nav a:hover {
   position: fixed;
   right: 20px;
   top: 50%;
+  max-width: 50ch;
   transform: translateY(-50%);
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -192,18 +198,44 @@ nav a:hover {
 }
 
 /* Content sections */
-#intro {
+.content-section {
   min-height: 100vh;
   padding: 100px 10%;
-  background: linear-gradient(0deg, #edededd4 90%, #ffffff00 100%);
+  background: linear-gradient(0deg, #ededede4 100%, #ffffff00 100%);
   margin-left: auto;
   margin-right: auto;
 }
 
-.content-section {
+#intro {
   min-height: 100vh;
   padding: 100px 10%;
-  background: linear-gradient(0deg, #edededd4 100%, #ffffff00 100%);
+  background: linear-gradient(
+    45deg,
+    #abea5ebc 4%,
+    #edededd4 9%,
+    #ffffff2e 100%
+  );
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#intro2 {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: linear-gradient(
+    45deg,
+    #abea5ebc 4%,
+    #edededd4 9%,
+    #ffffff2e 100%
+  );
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#term-index {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: linear-gradient(-40deg, #edededd4 90%, #abea5e 100%);
   margin-left: auto;
   margin-right: auto;
 }
