@@ -7,6 +7,7 @@
 body {
   background-color: var(--primary-bg-color);
   color: var(--main-text-color);
+  border: 10px var(--primary-bg-color);
   background-image: url(a3_bg_2.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,10 +21,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
   margin: 0 auto;
   align-items: flex-end;
-  max-width: 1500px;
+  max-width: 1200px;
   padding-bottom: 200px;
   /* background-color: aqua; */
 }
@@ -58,7 +59,8 @@ body {
 
 .ferris,
 .hammergame,
-.caro_full {
+.caro_full,
+.sell {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,6 +82,13 @@ h2 {
   line-height: 6rem;
 }
 
+.hammergame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   font-family: "Caveat", cursive;
   width: 80px;
@@ -90,7 +99,6 @@ button {
   font-size: 1.4rem;
   border-radius: 10px;
   background-color: rgb(237, 221, 100);
-  border: none;
   transition: background-color 0.2s ease, scale 0.5s ease, rotate 0.5s ease;
 }
 
@@ -102,23 +110,35 @@ button:hover {
 #mybutton {
   width: 80px;
   height: 40px;
+  margin: -60px;
+  z-index: 2;
 }
 
 #hammer {
-  scale: 1.9;
-  z-index: 0;
+  width: 820px;
+  height: 350px;
   transform-style: preserve-3d;
-  position: relative;
 }
 
 #bell {
-  scale: 0.09;
-  z-index: 2;
   position: absolute;
+  bottom: 0;
+  width: 1194.5px;
+  height: 50px;
+  margin: 0 auto;
+  /* scale: 0.09;
+  z-index: 2;
+  position: absolute; */
+}
+
+.gamesetup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #ring_3 {
-  scale: 1.9;
+  scale: 3;
   animation-name: loading;
   animation-duration: 8s;
   animation-iteration-count: infinite;
@@ -134,8 +154,8 @@ button:hover {
 }
 
 #ring_feet_2 {
-  scale: 1.9;
-  margin-top: -202px;
+  scale: 3;
+  margin-top: -155px;
 }
 
 @keyframes loading {
@@ -170,7 +190,7 @@ button:hover {
 .pole {
   width: 8px;
   background-color: rgb(255, 255, 255);
-  height: 230px;
+  height: 220px;
   position: absolute;
   top: 0;
 }
@@ -187,6 +207,18 @@ button:hover {
 /* all horse bounce slightly up */
 .horse img {
   animation: bounce 2s ease-in-out infinite;
+}
+
+#stalls {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+#extra {
+  position: absolute;
+  width: 200px;
 }
 
 /* so each horse is placed on its diameter using translateZ */
@@ -231,12 +263,17 @@ button:hover {
   animation-duration: 2s;
 }
 
+.bellanimation {
+  animation: moveBell 2s linear infinite;
+}
+
 @keyframes moveBell {
   0%,
   100% {
     transform: translateY(0);
   }
+  10%,
   50% {
-    transform: translateY(-250px);
+    transform: translateY(-276px);
   }
 }
