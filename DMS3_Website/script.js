@@ -1,4 +1,4 @@
-// Add some interactivity
+// Hero Section interactables
 document.addEventListener("mousemove", function (e) {
   // Only animate elements when mouse is in the hero section
   const heroRect = document.querySelector(".hero").getBoundingClientRect();
@@ -24,9 +24,9 @@ document.addEventListener("mousemove", function (e) {
   }
 });
 
-// Add some interactivity
+// Intro2 Interactables
 document.addEventListener("mousemove", function (e) {
-  // Only animate elements when mouse is in the hero section
+  // Only animate elements when mouse is in the intro2 section
   const intro2Rect = document.querySelector(".intro2").getBoundingClientRect();
   if (e.clientY >= intro2Rect.top && e.clientY <= intro2Rect.bottom) {
     const blob2 = document.querySelector(".blob2");
@@ -37,3 +37,51 @@ document.addEventListener("mousemove", function (e) {
     blob2.style.transform = `translate(${moveX}px, ${moveY}px)`;
   }
 });
+
+// // "Try sample" play section
+// const sound = document.querySelector("#pronounciation");
+// const playPauseBtn = document.querySelector("#play-button");
+// const playPauseImg = document.querySelector("#play-pause-img");
+// const progressBar = document.querySelector(".progress-bar");
+// sound.removeAttribute("controls");
+// playPauseBtn.addEventListener("click", togglePlayPause);
+// video.addEventListener("timeupdate", updateProgressBar);
+
+// //   // Animate progress bar
+// //   const progress = document.querySelector(".progress");
+// //   if (this.innerHTML === "⏸") {
+
+// function togglePlayPause() {
+//   if (video.paused || video.ended) {
+//     video.play();
+//     playPauseImg.src = "⏸";
+//   } else {
+//     video.pause();
+//     playPauseImg.src = "▶";
+//   }
+// }
+// function updateProgressBar() {
+//   const value = (sound.currentTime / sound.duration) * 100;
+//   progressBar.style.width = value + "%";
+// }
+// // document.querySelector(".play-button").addEventListener("click", function () {
+// //   this.innerHTML = this.innerHTML === "▶" ? "⏸" : "▶";
+
+// //   // Animate progress bar
+// //   const progress = document.querySelector(".progress");
+// //   if (this.innerHTML === "⏸") {
+// //     let width = 30;
+// //     const interval = setInterval(() => {
+// //       if (width >= 100) {
+// //         clearInterval(interval);
+// //         this.innerHTML = "▶";
+// //         setTimeout(() => {
+// //           progress.style.width = "30%";
+// //         }, 500);
+// //       } else {
+// //         width += 0.5;
+// //         progress.style.width = width + "%";
+// //       }
+// //     }, 50);
+// //   }
+// // });
