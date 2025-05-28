@@ -30,11 +30,15 @@ document.addEventListener("mousemove", function (e) {
   const intro2Rect = document.querySelector(".intro2").getBoundingClientRect();
   if (e.clientY >= intro2Rect.top && e.clientY <= intro2Rect.bottom) {
     const blob2 = document.querySelector(".blob2");
+    const ovali2 = document.querySelector("#oval-outline-intro2-2");
 
     const moveX = (e.clientX - window.innerWidth / 2) / 30;
     const moveY = (e.clientY - window.innerHeight / 2) / 30;
 
     blob2.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    ovali2.style.transform = `rotate(4deg) translate(${moveX * 0.6}px, ${
+      moveY * 2
+    }px)`;
   }
 });
 
