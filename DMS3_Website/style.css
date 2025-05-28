@@ -42,7 +42,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-style: italic;
   font-weight: normal;
   margin-bottom: 2rem;
@@ -83,7 +83,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #ededed 60%, #abea5e 80%, #750a81 100%);
+  background: linear-gradient(45deg, #ededed 60%, #abea5e 80%, #b216c3 100%);
   z-index: -10;
 }
 
@@ -140,19 +140,41 @@ nav a:hover {
 /* Decorative elements */
 .blob {
   position: absolute;
-  width: 40%;
-  height: 77%;
-  background-color: rgba(255, 255, 255, 0.522);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  right: -8%;
-  top: 20%;
+  scale: 1.2;
+  width: 30%;
+  height: 80%;
+  background: linear-gradient(-35deg, #ededed6e 50%, #cbdbb8 60%, #8e0e9c 100%);
+  border-radius: 50%;
+  /* border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; */
+  rotate: 60deg;
+  right: 13%;
+  top: 5%;
   z-index: -1;
+  box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
+}
+
+.blob2 {
+  position: absolute;
+  scale: 1;
+  width: 40%;
+  height: 80%;
+  background: linear-gradient(
+    175deg,
+    #ededed2c 20%,
+    #83da1865 40%,
+    #ca08e0a5 100%
+  );
+  border-radius: 50%;
+  left: -8%;
+  top: 20%;
+  z-index: 1;
+  rotate: 45deg;
   box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
 }
 
 .oval-outline {
   position: absolute;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  border: 3px solid rgba(167, 166, 167, 0.7);
   border-radius: 50%;
   z-index: -1;
   transition: transform 1s ease-out;
@@ -160,39 +182,54 @@ nav a:hover {
 
 .oval-outline-1 {
   width: 400px;
-  height: 180px;
+  height: 140px;
   left: -200px;
-  top: 0px;
+  top: -20px;
+  rotate: 20deg;
   transform: rotate(15deg);
 }
 
 .oval-outline-2 {
   width: 400px;
-  height: 150px;
+  height: 140px;
   left: -200px;
-  top: 40px;
+  top: 20px;
+  rotate: 20deg;
   transform: rotate(15deg);
 }
 
-.oval-outline-3 {
-  width: 2000px;
-  height: 900px;
-  left: 1200px;
-  top: 100px;
+#oval-outline-3 {
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  width: 900px;
+  height: 500px;
+  right: -600px;
+  bottom: 10px;
+  rotate: 25deg;
+  transform: rotate(15deg);
+}
+
+#oval-outline-intro2-1 {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  width: 500px;
+  height: 400px;
+  bottom: 10px;
+  left: -300px;
+  rotate: 130deg;
+  z-index: 1;
   transform: rotate(15deg);
 }
 
 /* Small decorative squares */
 .squares {
   position: absolute;
-  right: 10%;
+  right: 16%;
   bottom: 20%;
 }
 
 .square {
   width: 15px;
   height: 15px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(113, 113, 113, 0.7);
   margin: 5px;
   display: inline-block;
 }
@@ -209,29 +246,28 @@ nav a:hover {
 #intro {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 100px 10%;
-  background: linear-gradient(
-    45deg,
-    #abea5ebc 4%,
-    #edededd4 9%,
-    #ffffff2e 100%
-  );
+  background: linear-gradient(-90deg, #c1e79300 12%, #ededed 20%, #ffffff 100%);
   margin-left: auto;
   margin-right: auto;
 }
 
-#intro2 {
+.intro2 {
+  display: flex;
+  flex-direction: row;
   min-height: 100vh;
   padding: 100px 10%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
-    #abea5ebc 4%,
-    #edededd4 9%,
+    #abea5ea9 4%,
+    #edededee 9%,
     #ffffff2e 100%
-  );
+  ); */
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  overflow: hidden;
 }
 
 #term-index {
