@@ -320,6 +320,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 50px rgba(146, 145, 145, 0.3);
 }
 
 #ai {
@@ -328,7 +329,48 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 50px rgba(146, 145, 145, 0.3);
 }
+/* How it Works */
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  align-items: center;
+}
+.workflow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.workflow-item {
+  background: #f5f5f5;
+  padding: 40px;
+  border-radius: 50%;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.workflow-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.536);
+}
+/*____________________________*/
 
 /*Present on intro and intro2*/
 /* Small decorative squares */
@@ -441,42 +483,145 @@ nav a:hover {
 }
 /*______________________*/
 
-/* How it Works */
-.how-it-works {
-  display: flex;
-  flex-direction: column;
+/* Pull-out window styles */
+.detail-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
   background: white;
-  text-align: center;
-  padding: 60px 20px;
-  align-items: center;
-}
-.workflow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 80px;
-  margin: 60px 0;
-  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.workflow-item {
-  background: #f5f5f5;
+#human-detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  border-radius: 20px;
   padding: 40px;
-  border-radius: 50%;
-  width: 300px;
-  height: 250px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.detail-window.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.detail-window h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff2323;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.detail-window .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  font-size: 18px;
+}
+
+.detail-window,
+.icon,
+.human {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: white;
+}
+
+.detail-window .icon.ai {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  color: white;
+}
+
+.detail-window p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.detail-window .capabilities {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.detail-window .capabilities h4 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.detail-window .capabilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-window .capabilities li {
+  color: #666;
+  margin-bottom: 8px;
+  padding-left: 20px;
   position: relative;
 }
 
-.workflow-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+.detail-window .capabilities li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #8bc34a;
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }

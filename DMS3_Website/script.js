@@ -60,51 +60,55 @@ document.addEventListener("mousemove", function (e) {
     }px)`;
   }
 });
+//_________________________________________//
 
-// // "Try sample" play section
-// const sound = document.querySelector("#pronounciation");
-// const playPauseBtn = document.querySelector("#play-button");
-// const playPauseImg = document.querySelector("#play-pause-img");
-// const progressBar = document.querySelector(".progress-bar");
-// sound.removeAttribute("controls");
-// playPauseBtn.addEventListener("click", togglePlayPause);
-// video.addEventListener("timeupdate", updateProgressBar);
+// Interactive workflow items
+document.querySelectorAll(".workflow-item").forEach((item) => {
+  item.addEventListener("click", function () {
+    const type = this.getAttribute("data-type");
+    const overlay = document.getElementById("overlay");
+    const detailWindow = document.getElementById(`${type}-detail`);
 
-// //   // Animate progress bar
-// //   const progress = document.querySelector(".progress");
-// //   if (this.innerHTML === "⏸") {
+    // Add active class to clicked item
+    document
+      .querySelectorAll(".workflow-item")
+      .forEach((el) => el.classList.remove("active"));
+    this.classList.add("active");
 
-// function togglePlayPause() {
-//   if (video.paused || video.ended) {
-//     video.play();
-//     playPauseImg.src = "⏸";
-//   } else {
-//     video.pause();
-//     playPauseImg.src = "▶";
-//   }
-// }
-// function updateProgressBar() {
-//   const value = (sound.currentTime / sound.duration) * 100;
-//   progressBar.style.width = value + "%";
-// }
-// // document.querySelector(".play-button").addEventListener("click", function () {
-// //   this.innerHTML = this.innerHTML === "▶" ? "⏸" : "▶";
+    // Show overlay and detail window
+    overlay.classList.add("active");
+    detailWindow.classList.add("active");
 
-// //   // Animate progress bar
-// //   const progress = document.querySelector(".progress");
-// //   if (this.innerHTML === "⏸") {
-// //     let width = 30;
-// //     const interval = setInterval(() => {
-// //       if (width >= 100) {
-// //         clearInterval(interval);
-// //         this.innerHTML = "▶";
-// //         setTimeout(() => {
-// //           progress.style.width = "30%";
-// //         }, 500);
-// //       } else {
-// //         width += 0.5;
-// //         progress.style.width = width + "%";
-// //       }
-// //     }, 50);
-// //   }
-// // });
+    // Prevent body scroll
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Close detail windows
+function closeDetailWindow() {
+  const overlay = document.getElementById("overlay");
+  const detailWindows = document.querySelectorAll(".detail-window");
+  const workflowItems = document.querySelectorAll(".workflow-item");
+
+  overlay.classList.remove("active");
+  detailWindows.forEach((window) => window.classList.remove("active"));
+  workflowItems.forEach((item) => item.classList.remove("active"));
+
+  // Restore body scroll
+  document.body.style.overflow = "";
+}
+
+// Close button event listeners
+document.querySelectorAll(".close-button").forEach((button) => {
+  button.addEventListener("click", closeDetailWindow);
+});
+
+// Overlay click to close
+document.getElementById("overlay").addEventListener("click", closeDetailWindow);
+
+// Escape key to close
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeDetailWindow();
+  }
+});
