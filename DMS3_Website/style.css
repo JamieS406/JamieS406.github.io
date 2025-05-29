@@ -75,7 +75,6 @@ h5 {
 }
 
 h6 {
-  line-height: 3rem;
   font-size: 0.9rem;
   color: #666;
 }
@@ -184,6 +183,42 @@ nav a:hover {
   box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
 }
 
+.blob3 {
+  position: absolute;
+  scale: 1;
+  width: 40%;
+  height: 10%;
+  background: linear-gradient(
+    175deg,
+    #ededed2c 20%,
+    #83da1865 40%,
+    #ca08e0a5 100%
+  );
+  border-radius: 50%;
+  right: -8%;
+  z-index: 0;
+  rotate: 45deg;
+  box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
+}
+
+.blob4 {
+  position: absolute;
+  scale: 1;
+  width: 40%;
+  height: 10%;
+  background: linear-gradient(
+    175deg,
+    #ededed2c 20%,
+    #83da1865 40%,
+    #ca08e0a5 100%
+  );
+  border-radius: 50%;
+  left: -8%;
+  z-index: 0;
+  rotate: 45deg;
+  box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
+}
+
 .oval-outline {
   position: absolute;
   border: 3px solid rgba(167, 166, 167, 0.7);
@@ -220,6 +255,7 @@ nav a:hover {
   transform: rotate(15deg);
 }
 
+/* INTRO2 section OVALS*/
 #oval-outline-intro2-1 {
   border: 3px solid rgba(255, 255, 255, 0.7);
   width: 500px;
@@ -242,7 +278,9 @@ nav a:hover {
   transform: rotate(15deg);
 }
 
-#oval-outline-hwork-1 {
+/*HOW IT WORKS SECTION*/
+
+/* #oval-outline-hwork-1 {
   width: 700px;
   height: 500px;
   left: 100px;
@@ -258,6 +296,12 @@ nav a:hover {
   rotate: 150deg;
   z-index: 1;
   transform: rotate(15deg);
+} */
+
+#howwork {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .venn {
@@ -266,7 +310,7 @@ nav a:hover {
   justify-content: space-around;
   gap: 10px;
   margin: 0 auto;
-  align-items: flex-end;
+  align-items: center;
   padding-top: 200px;
 }
 
@@ -286,6 +330,7 @@ nav a:hover {
   align-items: center;
 }
 
+/*Present on intro and intro2*/
 /* Small decorative squares */
 .squares {
   position: absolute;
@@ -337,12 +382,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-#howwork {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 #term-index {
   min-height: 100vh;
   padding: 100px 10%;
@@ -361,7 +400,7 @@ nav a:hover {
 }
 
 /*__________________________*/
-/* Tools Section */
+/* Example word Section */
 .eg-section {
   position: relative;
 }
@@ -396,4 +435,45 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+/*______________________*/
+
+/* How it Works */
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  align-items: center;
+}
+.workflow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.workflow-item {
+  background: #f5f5f5;
+  padding: 40px;
+  border-radius: 50%;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.workflow-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
