@@ -42,6 +42,25 @@ document.addEventListener("mousemove", function (e) {
   }
 });
 
+// Howwork Interactables
+document.addEventListener("mousemove", function (e) {
+  // Only animate elements when mouse is in the intro2 section
+  const intro2Rect = document
+    .querySelector(".how-it-works")
+    .getBoundingClientRect();
+  if (e.clientY >= intro2Rect.top && e.clientY <= intro2Rect.bottom) {
+    const blob2 = document.querySelector(".blob3");
+
+    const moveX = (e.clientX - window.innerWidth / 2) / 30;
+    const moveY = (e.clientY - window.innerHeight / 2) / 30;
+
+    blob3.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    ovali2.style.transform = `rotate(4deg) translate(${moveX * 0.6}px, ${
+      moveY * 2
+    }px)`;
+  }
+});
+
 // // "Try sample" play section
 // const sound = document.querySelector("#pronounciation");
 // const playPauseBtn = document.querySelector("#play-button");
