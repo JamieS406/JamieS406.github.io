@@ -364,6 +364,7 @@ nav a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
+  box-shadow: 0 0 50px rgba(146, 145, 145, 0.3);
 }
 
 .workflow-item:hover {
@@ -608,4 +609,95 @@ nav a:hover {
 
 .close-button:hover {
   color: #000;
+}
+
+/*_______________________________*/
+/* Dashboard Section */
+.dashboard-section {
+  background: white;
+  position: relative;
+}
+
+.dashboard-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -10%;
+  width: 50%;
+  height: 200px;
+  background: radial-gradient(
+    ellipse,
+    rgba(139, 195, 74, 0.3) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.dashboard-mockup {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.dashboard-header {
+  background: #f8f8f8;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-weight: bold;
+}
+
+.dashboard-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn {
+  padding: 5px 15px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.control-btn:hover {
+  background: #d0d0d0;
+}
+
+.dashboard-content {
+  padding: 30px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.data-label {
+  font-weight: 500;
+}
+
+.data-value {
+  color: #666;
+}
+
+.highlight {
+  color: #8bc34a;
+  font-weight: bold;
 }
