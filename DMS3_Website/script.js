@@ -84,31 +84,31 @@ document.querySelectorAll(".workflow-item").forEach((item) => {
   });
 });
 
-// // Close detail windows
-// function closeDetailWindow() {
-//   const overlay = document.getElementById("overlay");
-//   const detailWindows = document.querySelectorAll(".detail-window");
-//   const workflowItems = document.querySelectorAll(".workflow-item");
+// Close detail windows
+function closeDetailWindow() {
+  const overlay = document.getElementById("overlay");
+  const detailWindows = document.querySelectorAll(".detail-window");
+  const workflowItems = document.querySelectorAll(".workflow-item");
 
-//   overlay.classList.remove("active");
-//   detailWindows.forEach((window) => window.classList.remove("active"));
-//   workflowItems.forEach((item) => item.classList.remove("active"));
+  overlay.classList.remove("active");
+  detailWindows.forEach((window) => window.classList.remove("active"));
+  workflowItems.forEach((item) => item.classList.remove("active"));
 
-//   // Restore body scroll
-//   document.body.style.overflow = "";
-// }
+  // Restore body scroll
+  document.body.style.overflow = "";
+}
 
-// // Close button event listeners
-// document.querySelectorAll(".close-button").forEach((button) => {
-//   button.addEventListener("click", closeDetailWindow);
-// });
+// Close button event listeners
+document.querySelectorAll(".close-button").forEach((button) => {
+  button.addEventListener("click", closeDetailWindow);
+});
 
-// // Overlay click to close
-// document.getElementById("overlay").addEventListener("click", closeDetailWindow);
+// Overlay click to close
+document.getElementById("overlay").addEventListener("click", closeDetailWindow);
 
-// // Escape key to close
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape") {
-//     closeDetailWindow();
-//   }
-// });
+// Escape key to close
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeDetailWindow();
+  }
+});
