@@ -484,31 +484,34 @@ nav a:hover {
 /*______________________*/
 
 /* Pull-out window styles */
-.detail-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
   opacity: 0;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
-#human-detail {
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.detail-window {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   background: white;
   border-radius: 20px;
   padding: 40px;
-  max-width: 500px;
+  max-width: 1000px;
   width: 90%;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -524,7 +527,7 @@ nav a:hover {
 .detail-window h3 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #ff2323;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -605,23 +608,4 @@ nav a:hover {
 
 .close-button:hover {
   color: #000;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
 }
