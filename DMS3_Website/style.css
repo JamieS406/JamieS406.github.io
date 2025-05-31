@@ -703,3 +703,12 @@ nav a:hover {
   color: #8bc34a;
   font-weight: bold;
 }
+
+/* Media player styling */
+.media-player {
+  padding-top: 20px;
+  width: 100%;
+  height: max-content;
+  margin: 0 auto;
+  align-items: center;
+}
