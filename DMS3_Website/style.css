@@ -705,10 +705,8 @@ nav a:hover {
 }
 
 /* Media player styling */
-.media-player {
-  padding-top: 20px;
+#media-player {
   width: 100%;
-  height: max-content;
   margin: 0 auto;
   align-items: center;
 }
