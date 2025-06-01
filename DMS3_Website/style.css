@@ -739,7 +739,16 @@ nav a:hover {
 
 .table {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#table_4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 0;
   border: 1px solid #dee2e6;
   border-radius: 8px;
@@ -811,7 +820,7 @@ nav a:hover {
   margin: 1rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .table {
     grid-template-columns: 1fr;
     gap: 0;
