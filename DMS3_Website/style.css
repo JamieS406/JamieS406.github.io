@@ -744,12 +744,22 @@ nav a:hover {
   border: 1px solid #dee2e6;
   border-radius: 8px;
   overflow: hidden;
+  padding-bottom: 50px;
 }
 
-.table_4r {
+.table_5c {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table_2c {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
   border: 1px solid #dee2e6;
   border-radius: 8px;
   overflow: hidden;
@@ -849,6 +859,12 @@ nav a:hover {
     display: block;
     margin-bottom: 0.5rem;
   }
+}
+/*--------------------------------------*/
+#demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* Media player styling */
 #media-player {
