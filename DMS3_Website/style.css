@@ -185,7 +185,7 @@ nav a:hover {
 
 .blob3 {
   position: absolute;
-  scale: 1;
+  scale: 0.8;
   width: 40%;
   height: 10%;
   background: linear-gradient(
@@ -195,7 +195,7 @@ nav a:hover {
     #9606a7a5 100%
   );
   border-radius: 50%;
-  right: -8%;
+  right: -10%;
   z-index: 0;
   rotate: 45deg;
   box-shadow: 0 0 50px rgba(241, 239, 239, 0.3);
@@ -203,7 +203,7 @@ nav a:hover {
 
 .blob4 {
   position: absolute;
-  scale: 1;
+  scale: 0.8;
   width: 40%;
   height: 10%;
   background: linear-gradient(
@@ -863,7 +863,7 @@ nav a:hover {
 /*--------------------------------------*/
 #demo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 /* Media player styling */
