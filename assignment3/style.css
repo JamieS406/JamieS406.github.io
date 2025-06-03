@@ -26,6 +26,7 @@ body {
   gap: 50px;
 }
 
+/*Subtitle font*/
 h1 {
   font-family: "recursive", cursive;
   font-weight: 900;
@@ -33,6 +34,7 @@ h1 {
   font-size: 1rem;
 }
 
+/*Title font*/
 h2 {
   font-family: "Caveat", cursive;
   font-weight: 900;
@@ -98,6 +100,180 @@ p {
   align-items: center;
 }
 /*--------------------------------------------------*/
+/*-------------*/
+/*WITHIN ".ferris" SECTION:*/
+/*"Hover" Interaction to make rotation animation speed up*/
+#ring_3 {
+  scale: 3;
+  animation-name: loading;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: rotate 0.8s ease;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+/*upon hovering, the animation speeds up 
+from 1 full revolution every 8s to 1 full revolution every 2s*/
+#ring_3:hover {
+  animation-duration: 2s;
+}
+
+/*adjust margin to accomodate transparent space on top of original design*/
+#ring_feet_2 {
+  scale: 3;
+  margin-top: -155px;
+}
+
+/*to make ferris wheel do a full revolution*/
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+/*-------------*/
+
+/*-------------*/
+/*WITHIN ".caro_full" SECTION:*/
+/*make carousel*/
+/*"Hover" Interaction to make rotation animation speed up*/
+/* we spin the carousel using the spin animation not the horses */
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  animation: spin 10s linear infinite;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0.8;
+}
+
+/*pole is "absolute"-> bound to .carousel "relative"*/
+.pole {
+  width: 8px;
+  background-color: rgb(255, 255, 255);
+  height: 220px;
+  position: absolute;
+  top: 0;
+}
+
+/* using preserve-3d to ensure it rotates through z-index*/
+.horse {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+/* all horse bounce slightly up */
+.horse img {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/*base static sections of carousel*/
+#base {
+  scale: 0.25;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/*KEYFRAMING WITHIN ".caro_full" SECTION:*/
+/* so each horse is placed on its diameter using translateZ */
+/* since we do not want all four horses at the same place */
+/* we rotate their position so first is 12 o clock second at 3 clock (90deg) */
+/* third at 6 0 clock (180deg) and fourth at 9 o clock (270deg) */
+/* doing this will allow all four horses to rotate around the circle */
+/* and create the merry go around illusion */
+.horse1 {
+  transform: rotateY(0deg) translateZ(-120px);
+}
+.horse2 {
+  transform: rotateY(90deg) translateZ(-120px);
+}
+.horse3 {
+  transform: rotateY(180deg) translateZ(-120px);
+}
+.horse4 {
+  transform: rotateY(270deg) translateZ(-120px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.carousel:hover {
+  animation-duration: 2s;
+}
+/*-------------*/
+
+/*-------------*/
+/*WITHIN ".sell" SECTION*/
+#stalls {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  position: absolute;
+}
+
+#lights {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  margin: 100px;
+  z-index: 2;
+}
+#string {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  margin: 100px;
+  z-index: 1;
+}
+
+#extra {
+  position: absolute;
+  width: 190px;
+}
+
+#string_extra {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  margin: 100px;
+  z-index: 1;
+}
+
+#light_extra {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  margin: 100px;
+  z-index: 2;
+}
 
 /*-------------*/
 /*WITHIN ".hammergame" SECTION:*/
@@ -149,168 +325,6 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
-/*-------------*/
-
-/*-------------*/
-/*WITHIN ".ferris" SECTION:*/
-/*"Hover" Interaction to make rotation animation speed up*/
-#ring_3 {
-  scale: 3;
-  animation-name: loading;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition: rotate 0.8s ease;
-  width: 200px;
-  height: 200px;
-  z-index: 1;
-}
-
-#ring_3:hover {
-  animation-duration: 2s;
-}
-
-#ring_feet_2 {
-  scale: 3;
-  margin-top: -155px;
-}
-
-@keyframes loading {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-
-#base {
-  scale: 0.25;
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-}
-/*-------------*/
-
-/* we spin the carousel using the spin animation not the horses */
-.carousel {
-  position: relative;
-  width: 600px;
-  height: 200px;
-  animation: spin 10s linear infinite;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scale: 0.8;
-}
-
-.pole {
-  width: 8px;
-  background-color: rgb(255, 255, 255);
-  height: 220px;
-  position: absolute;
-  top: 0;
-}
-
-/* using preserve-3d is important here */
-.horse {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  transform-style: preserve-3d;
-  /* background-color: blueviolet; */
-}
-
-/* all horse bounce slightly up */
-.horse img {
-  animation: bounce 2s ease-in-out infinite;
-}
-
-#stalls {
-  position: relative;
-  width: 260px;
-  height: 200px;
-  position: absolute;
-}
-
-#lights {
-  position: absolute;
-  width: 250px;
-  height: 200px;
-  margin: 100px;
-  z-index: 2;
-}
-#string {
-  position: absolute;
-  width: 250px;
-  height: 200px;
-  margin: 100px;
-  z-index: 1;
-}
-
-#extra {
-  position: absolute;
-  width: 190px;
-}
-
-#string_extra {
-  position: absolute;
-  width: 170px;
-  height: 200px;
-  margin: 100px;
-  z-index: 1;
-}
-
-#light_extra {
-  position: absolute;
-  width: 170px;
-  height: 200px;
-  margin: 100px;
-  z-index: 2;
-}
-
-/* so each horse is placed on its diameter using translateZ */
-/* since we do not want all four horses at the same place */
-/* we rotate their position so first is 12 o clock second at 3 clock (90deg) */
-/* third at 6 0 clock (180deg) and fourth at 9 o clock (270deg) */
-/* doing this will allow all four horses to rotate around the circle */
-/* and create the merry go around illusion */
-.horse1 {
-  transform: rotateY(0deg) translateZ(-120px);
-}
-.horse2 {
-  transform: rotateY(90deg) translateZ(-120px);
-}
-.horse3 {
-  transform: rotateY(180deg) translateZ(-120px);
-}
-.horse4 {
-  transform: rotateY(270deg) translateZ(-120px);
-}
-
-@keyframes spin {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.carousel:hover {
-  animation-duration: 2s;
-}
 
 .bellanimation {
   animation: moveBell 2s linear infinite;
@@ -330,3 +344,4 @@ button:hover {
     transform: translateY(-276px);
   }
 }
+/*-------------*/

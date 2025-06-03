@@ -35,6 +35,7 @@ body {
   overflow: hidden;
 }
 
+/*Biggest title*/
 h1 {
   font-size: 8rem;
   font-weight: 100;
@@ -279,32 +280,22 @@ nav a:hover {
 }
 
 /*HOW IT WORKS SECTION*/
-
-/* #oval-outline-hwork-1 {
-  width: 700px;
-  height: 500px;
-  left: 100px;
-  rotate: 1deg;
-  z-index: 1;
-  transform: rotate(15deg);
-}
-
-#oval-outline-hwork-2 {
-  width: 700px;
-  height: 500px;
-  right: 100px;
-  rotate: 150deg;
-  z-index: 1;
-  transform: rotate(15deg);
-} */
-
 #howwork {
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
-.venn {
+/* How it Works */
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  align-items: center;
+}
+
+/* .venn {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -312,7 +303,7 @@ nav a:hover {
   margin: 0 auto;
   align-items: center;
   padding-top: 200px;
-}
+} */
 
 #human {
   margin: -20px;
@@ -320,6 +311,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   box-shadow: 0 0 50px rgba(146, 145, 145, 0.3);
 }
 
@@ -330,15 +322,6 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 50px rgba(146, 145, 145, 0.3);
-}
-/* How it Works */
-.how-it-works {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  text-align: center;
-  padding: 60px 20px;
-  align-items: center;
 }
 .workflow {
   display: flex;
@@ -605,105 +588,6 @@ nav a:hover {
   color: #000;
 }
 
-/*_______________________________*/
-/* Dashboard Section */
-
-/* #term-index {
-  min-height: 100vh;
-  padding: 10px;
-  background: linear-gradient(-40deg, #edededd4 90%, #abea5e 100%);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.term-section {
-  background: white;
-  position: relative;
-}
-
-.dashboard-section::after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: -10%;
-  width: 50%;
-  height: 200px;
-  background: radial-gradient(
-    ellipse,
-    rgba(139, 195, 74, 0.3) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-}
-
-.term-mockup {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 40px 0;
-}
-
-.term-header {
-  background: #f8f8f8;
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.term-title {
-  font-weight: bold;
-}
-
-.dashboard-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.control-btn {
-  padding: 5px 15px;
-  background: #e0e0e0;
-  border: none;
-  border-radius: 15px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.control-btn:hover {
-  background: #d0d0d0;
-}
-
-.dashboard-content {
-  padding: 30px;
-}
-
-.data-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.data-row:last-child {
-  border-bottom: none;
-}
-
-.data-label {
-  font-weight: 500;
-}
-
-.data-value {
-  color: #666;
-}
-
-.highlight {
-  color: #8bc34a;
-  font-weight: bold;
-} */
-
 /*__________________________________________*/
 #term-index {
   /* max-width: 1200px; */
@@ -729,13 +613,6 @@ nav a:hover {
 .section:not(:last-child) {
   border-bottom: 1px solid #e9ecef;
 }
-
-/* h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-} */
 
 .table {
   display: grid;
@@ -860,6 +737,45 @@ nav a:hover {
     margin-bottom: 0.5rem;
   }
 }
+/*--------------------------------*/
+/*ACCENT SECTION*/
+#accent {
+  padding-top: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 5px;
+  background: linear-gradient(0deg, #ededede4 100%, #ffffff00 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.acc-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.acc-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  margin: 10px auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.acc-audios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space;
+  gap: 20px;
+}
+
 /*--------------------------------------*/
 #demo {
   display: flex;
