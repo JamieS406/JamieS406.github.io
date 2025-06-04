@@ -560,7 +560,7 @@ nav a:hover {
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   max-width: 55ch;
 }
 
@@ -753,6 +753,7 @@ nav a:hover {
 
 .acc-container {
   padding-top: 50px;
+  /* padding-left: 100px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -786,6 +787,11 @@ nav a:hover {
   gap: 20px;
 }
 
+.acc-container h3 {
+  font-size: 3.5rem;
+  max-width: 15ch;
+  padding-left: 20px;
+}
 /*--------------------------------------*/
 #demo {
   display: flex;
