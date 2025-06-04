@@ -338,6 +338,16 @@ nav a:hover {
   transform: rotate(15deg);
 }
 
+#oval-outline-accent-3 {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  width: 70px;
+  height: 80px;
+  right: 50px;
+  bottom: 23%;
+  rotate: 25deg;
+  transform: rotate(15deg);
+}
+
 /*HOW IT WORKS SECTION*/
 #howwork {
   align-items: center;
