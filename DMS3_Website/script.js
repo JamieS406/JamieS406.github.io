@@ -60,6 +60,24 @@ document.addEventListener("mousemove", function (e) {
     }px)`;
   }
 });
+
+// Accent Interactables
+document.addEventListener("mousemove", function (e) {
+  // Only animate elements when mouse is in the intro2 section
+  const intro2Rect = document.querySelector(".accent").getBoundingClientRect();
+  if (e.clientY >= intro2Rect.top && e.clientY <= intro2Rect.bottom) {
+    const blob5 = document.querySelector(".blob5");
+    const blob6 = document.querySelector(".blob6");
+
+    const moveX = (e.clientX - window.innerWidth / 2) / 30;
+    const moveY = (e.clientY - window.innerHeight / 2) / 30;
+
+    blob5.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    blob6.style.transform = `rotate(4deg) translate(${moveX * 0.3}px, ${
+      moveY * 5
+    }px)`;
+  }
+});
 //_________________________________________//
 
 // Interactive workflow items
