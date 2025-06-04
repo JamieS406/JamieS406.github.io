@@ -740,7 +740,6 @@ nav a:hover {
 /*--------------------------------*/
 /*ACCENT SECTION*/
 #accent {
-  padding-top: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -753,6 +752,7 @@ nav a:hover {
 }
 
 .acc-container {
+  padding-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -763,11 +763,21 @@ nav a:hover {
   background: white;
   border-radius: 20px;
   padding: 40px;
-  max-width: 400px;
+  min-width: 500px;
   margin: 10px auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
+
+.acc-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 50px;
+}
+
 .acc-audios {
   display: flex;
   flex-direction: column;
