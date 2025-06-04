@@ -792,6 +792,52 @@ nav a:hover {
   max-width: 15ch;
   padding-left: 20px;
 }
+/*-------------*/
+#img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  margin-left: 360px;
+  gap: 10px;
+}
+
+#header_img-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#header_img-container h3 {
+  font-size: 3rem;
+  max-width: 30ch;
+}
+
+.sub_img-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.sub_img-container h4 {
+  line-height: 1.4rem;
+}
+
+.img-card {
+  background: white;
+  border-radius: 20px;
+  padding: 70px;
+  margin: 20px auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
 /*--------------------------------------*/
 #demo {
   display: flex;
