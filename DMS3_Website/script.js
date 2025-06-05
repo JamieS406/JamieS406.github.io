@@ -63,7 +63,7 @@ document.addEventListener("mousemove", function (e) {
 
 // Accent Interactables
 document.addEventListener("mousemove", function (e) {
-  // Only animate elements when mouse is in the intro2 section
+  // Only animate elements when mouse is in the .accent section
   const intro2Rect = document.querySelector(".accent").getBoundingClientRect();
   if (e.clientY >= intro2Rect.top && e.clientY <= intro2Rect.bottom) {
     const blob5 = document.querySelector(".blob5");
